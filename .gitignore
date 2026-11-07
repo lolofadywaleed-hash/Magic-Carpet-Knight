@@ -31,3 +31,13 @@ node_modules/
 !assets/fonts/NotoSansArabic-wght.ttf
 !assets/fonts/NotoSansArabic-OFL.txt
 !assets/share/favicon.png
+!assets/audio/collect.wav
+!assets/audio/impact.wav
+!assets/models/**/*.png
+# Manifest-hydrated 3D models
+/assets/**/*.[gG][lL][bB]
+/assets/**/*.[gG][lL][tT][fF]
+/assets/**/*.[oO][bB][jJ]
+/assets/**/*.[fF][bB][xX]
+/assets/**/*.[bB][lL][eE][nN][dD]
+/assets/**/*.[dD][aA][eE]

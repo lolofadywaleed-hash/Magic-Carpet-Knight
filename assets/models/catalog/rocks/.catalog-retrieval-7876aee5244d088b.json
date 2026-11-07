@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "archiveSha256": "483e1748fe8de6704f1780582668621312a5eaefc8ab0d177798af3ec004049f",
+  "archiveSizeBytes": 23830266,
+  "members": [
+    {
+      "member": "FBX__Rock_1.fbx",
+      "sha256": "8a6e150e2d71dd601daf48d7967e273e940347a4826c2004b71ed1a9fa99c962",
+      "sizeBytes": 15932
+    },
+    {
+      "member": "FBX__Rock_4.fbx",
+      "sha256": "a914a59150ad1c12ff01ffc11de22b826fee9d52dabeb703fb43e7bde1f04e1d",
+      "sizeBytes": 17068
+    },
+    {
+      "member": "FBX__Rock_Moss_2.fbx",
+      "sha256": "9e6bb49e692da8c21c6cf5cdb77bcf6b9956edb55e1719a265524f7007fc717c",
+      "sizeBytes": 17212
+    }
+  ],
+  "dependencyCoverage": "glb-gltf-obj-mtl-textureatlas-bmfont-tiled",
+  "limitations": [
+    ".fbx"
+  ],
+  "catalogSources": [
+    {
+      "snapshotId": "catalog-20260924-japan-characters-scene-removal-v1",
+      "catalogPath": "3d-models/vegetation/quaternius-ultimatenature/assets.zip"
+    }
+  ],
+  "catalogMetadata": [
+    {
+      "snapshotId": "catalog-20260924-japan-characters-scene-removal-v1",
+      "catalogPath": "3d-models/vegetation/quaternius-ultimatenature/assets.zip",
+      "metadataPath": "3d-models/vegetation/quaternius-ultimatenature/metadata.json",
+      "metadataSha256": "3263d91a4991e28eb62c9fae292e537e2843460dd05a9f774a59eeff6cff36a2",
+      "archiveSha256": "483e1748fe8de6704f1780582668621312a5eaefc8ab0d177798af3ec004049f",
+      "source": {
+        "packId": "quaternius:ultimatenature",
+        "name": "Quaternius • Ultimate Nature Pack",
+        "url": "https://quaternius.com/packs/ultimatenature.html",
+        "metadataPath": "3d-models/vegetation/quaternius-ultimatenature/metadata.json",
+        "metadataSha256": "sha256:3263d91a4991e28eb62c9fae292e537e2843460dd05a9f774a59eeff6cff36a2"
+      },
+      "license": {
+        "id": "CC0-1.0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attributionRequired": false,
+        "copyrightNoticeRequired": false,
+        "licenseNoticeRequired": false,
+        "modificationNoticeRequired": false,
+        "commercialUseAllowed": true,
+        "editableProjectDistributionAllowed": true,
+        "reusableTemplateDistributionAllowed": true
+      }
+    }
+  ]
+}

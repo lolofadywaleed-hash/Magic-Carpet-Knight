@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "archiveSha256": "4f6f65d17ab8f6a65fb7a2edb50232eb5ec6ad6ddf02f73d9b6aeed0e50626f2",
+  "archiveSizeBytes": 6835614,
+  "members": [
+    {
+      "member": "basecolor_gate.png",
+      "sha256": "a50007d37792746d111eb0b8ffa7d28330cb518f2085803c8af91027144c0d2d",
+      "sizeBytes": 326694
+    },
+    {
+      "member": "gate.glb",
+      "sha256": "c89bf85d687cfa6f016f329dc41c59ee753dcbbf2fdb447a1852b007960c74a2",
+      "sizeBytes": 6515160
+    },
+    {
+      "member": "metallic_gate.png",
+      "sha256": "aa6466a60bad14df27b26af79395b88cd627f26f11aa2d78ff0e848bfa0425af",
+      "sizeBytes": 6336
+    },
+    {
+      "member": "normal_gate.png",
+      "sha256": "f6c9ed5addc9a5ffb3c69997621e310cf73561d60dfd311c01cdd946e59f3290",
+      "sizeBytes": 353335
+    }
+  ],
+  "dependencyCoverage": "glb-gltf-obj-mtl-textureatlas-bmfont-tiled",
+  "limitations": [],
+  "catalogSources": [
+    {
+      "snapshotId": "catalog-20260924-japan-characters-scene-removal-v1",
+      "catalogPath": "3d-models/props/itch-io-4862256/assets.zip"
+    }
+  ],
+  "catalogMetadata": [
+    {
+      "snapshotId": "catalog-20260924-japan-characters-scene-removal-v1",
+      "catalogPath": "3d-models/props/itch-io-4862256/assets.zip",
+      "metadataPath": "3d-models/props/itch-io-4862256/metadata.json",
+      "metadataSha256": "67424b23d5700ee47b025c81e8f2a0f88b3380c6e65bcd05dfe800e552062eaa",
+      "archiveSha256": "4f6f65d17ab8f6a65fb7a2edb50232eb5ec6ad6ddf02f73d9b6aeed0e50626f2",
+      "source": {
+        "packId": "itch-io:4862256",
+        "name": "GAME READY GATE ASSET PACK",
+        "url": "https://oxygen3d.itch.io/game-ready-gate-asset-pack",
+        "metadataPath": "3d-models/props/itch-io-4862256/metadata.json",
+        "metadataSha256": "sha256:67424b23d5700ee47b025c81e8f2a0f88b3380c6e65bcd05dfe800e552062eaa"
+      },
+      "license": {
+        "id": "CC0-1.0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attributionRequired": false,
+        "copyrightNoticeRequired": false,
+        "licenseNoticeRequired": false,
+        "modificationNoticeRequired": false,
+        "commercialUseAllowed": true,
+        "editableProjectDistributionAllowed": true,
+        "reusableTemplateDistributionAllowed": true
+      }
+    }
+  ]
+}

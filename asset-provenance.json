@@ -1,5 +1,49 @@
 {
   "assets": {
+    "assets/audio/collect.wav": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "unknown",
+      "referenceEvidence": [
+        "scripts/magic_carpet_game.gd"
+      ],
+      "regions": [],
+      "sha256": "sha256:570f162b94e18f2036874e4dc9d7eb481c3a4ecae176de50e8d1271a66b58255",
+      "shipped": true,
+      "size": 7100,
+      "source": {},
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [
+        "scripts/magic_carpet_game.gd"
+      ],
+      "used": true,
+      "usedBy": []
+    },
+    "assets/audio/impact.wav": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "unknown",
+      "referenceEvidence": [
+        "scripts/magic_carpet_game.gd"
+      ],
+      "regions": [],
+      "sha256": "sha256:99f8897d1c5e91ab8aaffbf236fe90f7bd7e14fd75f0257575a02d0f0db9af5b",
+      "shipped": true,
+      "size": 12392,
+      "source": {},
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [
+        "scripts/magic_carpet_game.gd"
+      ],
+      "used": true,
+      "usedBy": []
+    },
     "assets/fonts/NotoSansArabic-wght.ttf": {
       "declaredUseEvidence": [],
       "generator": {},
@@ -13,6 +57,776 @@
       "sha256": "sha256:63111b5b2e074dd48cc67692e0a2726d86ee94c1c37fe8598257b7b4e87e869e",
       "shipped": true,
       "size": 844676,
+      "source": {},
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [
+        "scripts/magic_carpet_game.gd"
+      ],
+      "used": true,
+      "usedBy": []
+    },
+    "assets/models/catalog/gate/basecolor_gate.png": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [
+        {
+          "license": {
+            "attributionRequired": false,
+            "commercialUseAllowed": true,
+            "copyrightNoticeRequired": false,
+            "editableProjectDistributionAllowed": true,
+            "id": "CC0-1.0",
+            "licenseNoticeRequired": false,
+            "modificationNoticeRequired": false,
+            "reusableTemplateDistributionAllowed": true,
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+          },
+          "sha256": "sha256:4f6f65d17ab8f6a65fb7a2edb50232eb5ec6ad6ddf02f73d9b6aeed0e50626f2",
+          "source": {
+            "catalogPath": "3d-models/props/itch-io-4862256/assets.zip",
+            "metadataPath": "3d-models/props/itch-io-4862256/metadata.json",
+            "metadataSha256": "sha256:67424b23d5700ee47b025c81e8f2a0f88b3380c6e65bcd05dfe800e552062eaa",
+            "name": "GAME READY GATE ASSET PACK",
+            "packId": "itch-io:4862256",
+            "snapshotId": "catalog-20260924-japan-characters-scene-removal-v1",
+            "url": "https://oxygen3d.itch.io/game-ready-gate-asset-pack"
+          }
+        }
+      ],
+      "license": {
+        "attributionRequired": false,
+        "commercialUseAllowed": true,
+        "copyrightNoticeRequired": false,
+        "editableProjectDistributionAllowed": true,
+        "id": "CC0-1.0",
+        "licenseNoticeRequired": false,
+        "modificationNoticeRequired": false,
+        "reusableTemplateDistributionAllowed": true,
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "origin": "catalog",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:a50007d37792746d111eb0b8ffa7d28330cb518f2085803c8af91027144c0d2d",
+      "shipped": true,
+      "size": 326694,
+      "source": {
+        "catalogPath": "3d-models/props/itch-io-4862256/assets.zip",
+        "memberPath": "basecolor_gate.png",
+        "metadataPath": "3d-models/props/itch-io-4862256/metadata.json",
+        "metadataSha256": "sha256:67424b23d5700ee47b025c81e8f2a0f88b3380c6e65bcd05dfe800e552062eaa",
+        "name": "GAME READY GATE ASSET PACK",
+        "packId": "itch-io:4862256",
+        "snapshotId": "catalog-20260924-japan-characters-scene-removal-v1",
+        "url": "https://oxygen3d.itch.io/game-ready-gate-asset-pack"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/models/catalog/gate/gate.glb": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [
+        {
+          "license": {
+            "attributionRequired": false,
+            "commercialUseAllowed": true,
+            "copyrightNoticeRequired": false,
+            "editableProjectDistributionAllowed": true,
+            "id": "CC0-1.0",
+            "licenseNoticeRequired": false,
+            "modificationNoticeRequired": false,
+            "reusableTemplateDistributionAllowed": true,
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+          },
+          "sha256": "sha256:4f6f65d17ab8f6a65fb7a2edb50232eb5ec6ad6ddf02f73d9b6aeed0e50626f2",
+          "source": {
+            "catalogPath": "3d-models/props/itch-io-4862256/assets.zip",
+            "metadataPath": "3d-models/props/itch-io-4862256/metadata.json",
+            "metadataSha256": "sha256:67424b23d5700ee47b025c81e8f2a0f88b3380c6e65bcd05dfe800e552062eaa",
+            "name": "GAME READY GATE ASSET PACK",
+            "packId": "itch-io:4862256",
+            "snapshotId": "catalog-20260924-japan-characters-scene-removal-v1",
+            "url": "https://oxygen3d.itch.io/game-ready-gate-asset-pack"
+          }
+        }
+      ],
+      "license": {
+        "attributionRequired": false,
+        "commercialUseAllowed": true,
+        "copyrightNoticeRequired": false,
+        "editableProjectDistributionAllowed": true,
+        "id": "CC0-1.0",
+        "licenseNoticeRequired": false,
+        "modificationNoticeRequired": false,
+        "reusableTemplateDistributionAllowed": true,
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "origin": "catalog",
+      "referenceEvidence": [
+        "scripts/magic_carpet_game.gd"
+      ],
+      "regions": [],
+      "sha256": "sha256:c89bf85d687cfa6f016f329dc41c59ee753dcbbf2fdb447a1852b007960c74a2",
+      "shipped": true,
+      "size": 6515160,
+      "source": {
+        "catalogPath": "3d-models/props/itch-io-4862256/assets.zip",
+        "memberPath": "gate.glb",
+        "metadataPath": "3d-models/props/itch-io-4862256/metadata.json",
+        "metadataSha256": "sha256:67424b23d5700ee47b025c81e8f2a0f88b3380c6e65bcd05dfe800e552062eaa",
+        "name": "GAME READY GATE ASSET PACK",
+        "packId": "itch-io:4862256",
+        "snapshotId": "catalog-20260924-japan-characters-scene-removal-v1",
+        "url": "https://oxygen3d.itch.io/game-ready-gate-asset-pack"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [
+        "scripts/magic_carpet_game.gd"
+      ],
+      "used": true,
+      "usedBy": []
+    },
+    "assets/models/catalog/gate/gate_basecolor_gate.png": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "unknown",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:a50007d37792746d111eb0b8ffa7d28330cb518f2085803c8af91027144c0d2d",
+      "shipped": true,
+      "size": 326694,
+      "source": {},
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/models/catalog/gate/gate_metallic_gate.png": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "unknown",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:f98efc357e2583a047fec87ac5ffc9f0a400d8d792da93fa33fd4c7c823bb646",
+      "shipped": true,
+      "size": 11638,
+      "source": {},
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/models/catalog/gate/gate_normal_gate.png": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "unknown",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:f6c9ed5addc9a5ffb3c69997621e310cf73561d60dfd311c01cdd946e59f3290",
+      "shipped": true,
+      "size": 353335,
+      "source": {},
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/models/catalog/gate/metallic_gate.png": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [
+        {
+          "license": {
+            "attributionRequired": false,
+            "commercialUseAllowed": true,
+            "copyrightNoticeRequired": false,
+            "editableProjectDistributionAllowed": true,
+            "id": "CC0-1.0",
+            "licenseNoticeRequired": false,
+            "modificationNoticeRequired": false,
+            "reusableTemplateDistributionAllowed": true,
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+          },
+          "sha256": "sha256:4f6f65d17ab8f6a65fb7a2edb50232eb5ec6ad6ddf02f73d9b6aeed0e50626f2",
+          "source": {
+            "catalogPath": "3d-models/props/itch-io-4862256/assets.zip",
+            "metadataPath": "3d-models/props/itch-io-4862256/metadata.json",
+            "metadataSha256": "sha256:67424b23d5700ee47b025c81e8f2a0f88b3380c6e65bcd05dfe800e552062eaa",
+            "name": "GAME READY GATE ASSET PACK",
+            "packId": "itch-io:4862256",
+            "snapshotId": "catalog-20260924-japan-characters-scene-removal-v1",
+            "url": "https://oxygen3d.itch.io/game-ready-gate-asset-pack"
+          }
+        }
+      ],
+      "license": {
+        "attributionRequired": false,
+        "commercialUseAllowed": true,
+        "copyrightNoticeRequired": false,
+        "editableProjectDistributionAllowed": true,
+        "id": "CC0-1.0",
+        "licenseNoticeRequired": false,
+        "modificationNoticeRequired": false,
+        "reusableTemplateDistributionAllowed": true,
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "origin": "catalog",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:aa6466a60bad14df27b26af79395b88cd627f26f11aa2d78ff0e848bfa0425af",
+      "shipped": true,
+      "size": 6336,
+      "source": {
+        "catalogPath": "3d-models/props/itch-io-4862256/assets.zip",
+        "memberPath": "metallic_gate.png",
+        "metadataPath": "3d-models/props/itch-io-4862256/metadata.json",
+        "metadataSha256": "sha256:67424b23d5700ee47b025c81e8f2a0f88b3380c6e65bcd05dfe800e552062eaa",
+        "name": "GAME READY GATE ASSET PACK",
+        "packId": "itch-io:4862256",
+        "snapshotId": "catalog-20260924-japan-characters-scene-removal-v1",
+        "url": "https://oxygen3d.itch.io/game-ready-gate-asset-pack"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/models/catalog/gate/normal_gate.png": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [
+        {
+          "license": {
+            "attributionRequired": false,
+            "commercialUseAllowed": true,
+            "copyrightNoticeRequired": false,
+            "editableProjectDistributionAllowed": true,
+            "id": "CC0-1.0",
+            "licenseNoticeRequired": false,
+            "modificationNoticeRequired": false,
+            "reusableTemplateDistributionAllowed": true,
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+          },
+          "sha256": "sha256:4f6f65d17ab8f6a65fb7a2edb50232eb5ec6ad6ddf02f73d9b6aeed0e50626f2",
+          "source": {
+            "catalogPath": "3d-models/props/itch-io-4862256/assets.zip",
+            "metadataPath": "3d-models/props/itch-io-4862256/metadata.json",
+            "metadataSha256": "sha256:67424b23d5700ee47b025c81e8f2a0f88b3380c6e65bcd05dfe800e552062eaa",
+            "name": "GAME READY GATE ASSET PACK",
+            "packId": "itch-io:4862256",
+            "snapshotId": "catalog-20260924-japan-characters-scene-removal-v1",
+            "url": "https://oxygen3d.itch.io/game-ready-gate-asset-pack"
+          }
+        }
+      ],
+      "license": {
+        "attributionRequired": false,
+        "commercialUseAllowed": true,
+        "copyrightNoticeRequired": false,
+        "editableProjectDistributionAllowed": true,
+        "id": "CC0-1.0",
+        "licenseNoticeRequired": false,
+        "modificationNoticeRequired": false,
+        "reusableTemplateDistributionAllowed": true,
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "origin": "catalog",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:f6c9ed5addc9a5ffb3c69997621e310cf73561d60dfd311c01cdd946e59f3290",
+      "shipped": true,
+      "size": 353335,
+      "source": {
+        "catalogPath": "3d-models/props/itch-io-4862256/assets.zip",
+        "memberPath": "normal_gate.png",
+        "metadataPath": "3d-models/props/itch-io-4862256/metadata.json",
+        "metadataSha256": "sha256:67424b23d5700ee47b025c81e8f2a0f88b3380c6e65bcd05dfe800e552062eaa",
+        "name": "GAME READY GATE ASSET PACK",
+        "packId": "itch-io:4862256",
+        "snapshotId": "catalog-20260924-japan-characters-scene-removal-v1",
+        "url": "https://oxygen3d.itch.io/game-ready-gate-asset-pack"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/models/catalog/island/fbx/island_small.fbx": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [
+        {
+          "license": {
+            "attributionRequired": false,
+            "commercialUseAllowed": true,
+            "copyrightNoticeRequired": false,
+            "editableProjectDistributionAllowed": true,
+            "id": "CC0-1.0",
+            "licenseNoticeRequired": false,
+            "modificationNoticeRequired": false,
+            "reusableTemplateDistributionAllowed": true,
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+          },
+          "sha256": "sha256:15cb45abbcb3b7982c00537796f6824bbcdc28a1b85746b2f6aaea7aa26e115b",
+          "source": {
+            "catalogPath": "3d-models/architecture/itch-io-2177920/assets.zip",
+            "metadataPath": "3d-models/architecture/itch-io-2177920/metadata.json",
+            "metadataSha256": "sha256:6a38be14de07ed738a2c3d4f0448fe9f7b20e54d937908fa82362cc42458fbb7",
+            "name": "Floating Fungi: Low-Poly Mushroom Islands Asset Pack",
+            "packId": "itch-io:2177920",
+            "snapshotId": "catalog-20260924-japan-characters-scene-removal-v1",
+            "url": "https://dumivid.itch.io/floating-fungi-low-poly-mushroom-islands-asset-pack"
+          }
+        }
+      ],
+      "license": {
+        "attributionRequired": false,
+        "commercialUseAllowed": true,
+        "copyrightNoticeRequired": false,
+        "editableProjectDistributionAllowed": true,
+        "id": "CC0-1.0",
+        "licenseNoticeRequired": false,
+        "modificationNoticeRequired": false,
+        "reusableTemplateDistributionAllowed": true,
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "origin": "catalog",
+      "referenceEvidence": [
+        "scripts/magic_carpet_game.gd"
+      ],
+      "regions": [],
+      "sha256": "sha256:f3f9ce6ad934035ab4351b15f560dfbfcc3611f7f7ab414db2edee00a442b4f0",
+      "shipped": true,
+      "size": 47676,
+      "source": {
+        "catalogPath": "3d-models/architecture/itch-io-2177920/assets.zip",
+        "memberPath": "fbx/island_small.fbx",
+        "metadataPath": "3d-models/architecture/itch-io-2177920/metadata.json",
+        "metadataSha256": "sha256:6a38be14de07ed738a2c3d4f0448fe9f7b20e54d937908fa82362cc42458fbb7",
+        "name": "Floating Fungi: Low-Poly Mushroom Islands Asset Pack",
+        "packId": "itch-io:2177920",
+        "snapshotId": "catalog-20260924-japan-characters-scene-removal-v1",
+        "url": "https://dumivid.itch.io/floating-fungi-low-poly-mushroom-islands-asset-pack"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [
+        "scripts/magic_carpet_game.gd"
+      ],
+      "used": true,
+      "usedBy": []
+    },
+    "assets/models/catalog/rocks/FBX__Rock_1.fbx": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [
+        {
+          "license": {
+            "attributionRequired": false,
+            "commercialUseAllowed": true,
+            "copyrightNoticeRequired": false,
+            "editableProjectDistributionAllowed": true,
+            "id": "CC0-1.0",
+            "licenseNoticeRequired": false,
+            "modificationNoticeRequired": false,
+            "reusableTemplateDistributionAllowed": true,
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+          },
+          "sha256": "sha256:483e1748fe8de6704f1780582668621312a5eaefc8ab0d177798af3ec004049f",
+          "source": {
+            "catalogPath": "3d-models/vegetation/quaternius-ultimatenature/assets.zip",
+            "metadataPath": "3d-models/vegetation/quaternius-ultimatenature/metadata.json",
+            "metadataSha256": "sha256:3263d91a4991e28eb62c9fae292e537e2843460dd05a9f774a59eeff6cff36a2",
+            "name": "Quaternius • Ultimate Nature Pack",
+            "packId": "quaternius:ultimatenature",
+            "snapshotId": "catalog-20260924-japan-characters-scene-removal-v1",
+            "url": "https://quaternius.com/packs/ultimatenature.html"
+          }
+        }
+      ],
+      "license": {
+        "attributionRequired": false,
+        "commercialUseAllowed": true,
+        "copyrightNoticeRequired": false,
+        "editableProjectDistributionAllowed": true,
+        "id": "CC0-1.0",
+        "licenseNoticeRequired": false,
+        "modificationNoticeRequired": false,
+        "reusableTemplateDistributionAllowed": true,
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "origin": "catalog",
+      "referenceEvidence": [
+        "scripts/magic_carpet_game.gd"
+      ],
+      "regions": [],
+      "sha256": "sha256:8a6e150e2d71dd601daf48d7967e273e940347a4826c2004b71ed1a9fa99c962",
+      "shipped": true,
+      "size": 15932,
+      "source": {
+        "catalogPath": "3d-models/vegetation/quaternius-ultimatenature/assets.zip",
+        "memberPath": "FBX__Rock_1.fbx",
+        "metadataPath": "3d-models/vegetation/quaternius-ultimatenature/metadata.json",
+        "metadataSha256": "sha256:3263d91a4991e28eb62c9fae292e537e2843460dd05a9f774a59eeff6cff36a2",
+        "name": "Quaternius • Ultimate Nature Pack",
+        "packId": "quaternius:ultimatenature",
+        "snapshotId": "catalog-20260924-japan-characters-scene-removal-v1",
+        "url": "https://quaternius.com/packs/ultimatenature.html"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [
+        "scripts/magic_carpet_game.gd"
+      ],
+      "used": true,
+      "usedBy": []
+    },
+    "assets/models/catalog/rocks/FBX__Rock_4.fbx": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [
+        {
+          "license": {
+            "attributionRequired": false,
+            "commercialUseAllowed": true,
+            "copyrightNoticeRequired": false,
+            "editableProjectDistributionAllowed": true,
+            "id": "CC0-1.0",
+            "licenseNoticeRequired": false,
+            "modificationNoticeRequired": false,
+            "reusableTemplateDistributionAllowed": true,
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+          },
+          "sha256": "sha256:483e1748fe8de6704f1780582668621312a5eaefc8ab0d177798af3ec004049f",
+          "source": {
+            "catalogPath": "3d-models/vegetation/quaternius-ultimatenature/assets.zip",
+            "metadataPath": "3d-models/vegetation/quaternius-ultimatenature/metadata.json",
+            "metadataSha256": "sha256:3263d91a4991e28eb62c9fae292e537e2843460dd05a9f774a59eeff6cff36a2",
+            "name": "Quaternius • Ultimate Nature Pack",
+            "packId": "quaternius:ultimatenature",
+            "snapshotId": "catalog-20260924-japan-characters-scene-removal-v1",
+            "url": "https://quaternius.com/packs/ultimatenature.html"
+          }
+        }
+      ],
+      "license": {
+        "attributionRequired": false,
+        "commercialUseAllowed": true,
+        "copyrightNoticeRequired": false,
+        "editableProjectDistributionAllowed": true,
+        "id": "CC0-1.0",
+        "licenseNoticeRequired": false,
+        "modificationNoticeRequired": false,
+        "reusableTemplateDistributionAllowed": true,
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "origin": "catalog",
+      "referenceEvidence": [
+        "scripts/magic_carpet_game.gd"
+      ],
+      "regions": [],
+      "sha256": "sha256:a914a59150ad1c12ff01ffc11de22b826fee9d52dabeb703fb43e7bde1f04e1d",
+      "shipped": true,
+      "size": 17068,
+      "source": {
+        "catalogPath": "3d-models/vegetation/quaternius-ultimatenature/assets.zip",
+        "memberPath": "FBX__Rock_4.fbx",
+        "metadataPath": "3d-models/vegetation/quaternius-ultimatenature/metadata.json",
+        "metadataSha256": "sha256:3263d91a4991e28eb62c9fae292e537e2843460dd05a9f774a59eeff6cff36a2",
+        "name": "Quaternius • Ultimate Nature Pack",
+        "packId": "quaternius:ultimatenature",
+        "snapshotId": "catalog-20260924-japan-characters-scene-removal-v1",
+        "url": "https://quaternius.com/packs/ultimatenature.html"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [
+        "scripts/magic_carpet_game.gd"
+      ],
+      "used": true,
+      "usedBy": []
+    },
+    "assets/models/catalog/rocks/FBX__Rock_Moss_2.fbx": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [
+        {
+          "license": {
+            "attributionRequired": false,
+            "commercialUseAllowed": true,
+            "copyrightNoticeRequired": false,
+            "editableProjectDistributionAllowed": true,
+            "id": "CC0-1.0",
+            "licenseNoticeRequired": false,
+            "modificationNoticeRequired": false,
+            "reusableTemplateDistributionAllowed": true,
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+          },
+          "sha256": "sha256:483e1748fe8de6704f1780582668621312a5eaefc8ab0d177798af3ec004049f",
+          "source": {
+            "catalogPath": "3d-models/vegetation/quaternius-ultimatenature/assets.zip",
+            "metadataPath": "3d-models/vegetation/quaternius-ultimatenature/metadata.json",
+            "metadataSha256": "sha256:3263d91a4991e28eb62c9fae292e537e2843460dd05a9f774a59eeff6cff36a2",
+            "name": "Quaternius • Ultimate Nature Pack",
+            "packId": "quaternius:ultimatenature",
+            "snapshotId": "catalog-20260924-japan-characters-scene-removal-v1",
+            "url": "https://quaternius.com/packs/ultimatenature.html"
+          }
+        }
+      ],
+      "license": {
+        "attributionRequired": false,
+        "commercialUseAllowed": true,
+        "copyrightNoticeRequired": false,
+        "editableProjectDistributionAllowed": true,
+        "id": "CC0-1.0",
+        "licenseNoticeRequired": false,
+        "modificationNoticeRequired": false,
+        "reusableTemplateDistributionAllowed": true,
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "origin": "catalog",
+      "referenceEvidence": [
+        "scripts/magic_carpet_game.gd"
+      ],
+      "regions": [],
+      "sha256": "sha256:9e6bb49e692da8c21c6cf5cdb77bcf6b9956edb55e1719a265524f7007fc717c",
+      "shipped": true,
+      "size": 17212,
+      "source": {
+        "catalogPath": "3d-models/vegetation/quaternius-ultimatenature/assets.zip",
+        "memberPath": "FBX__Rock_Moss_2.fbx",
+        "metadataPath": "3d-models/vegetation/quaternius-ultimatenature/metadata.json",
+        "metadataSha256": "sha256:3263d91a4991e28eb62c9fae292e537e2843460dd05a9f774a59eeff6cff36a2",
+        "name": "Quaternius • Ultimate Nature Pack",
+        "packId": "quaternius:ultimatenature",
+        "snapshotId": "catalog-20260924-japan-characters-scene-removal-v1",
+        "url": "https://quaternius.com/packs/ultimatenature.html"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [
+        "scripts/magic_carpet_game.gd"
+      ],
+      "used": true,
+      "usedBy": []
+    },
+    "assets/models/catalog/rug/rug.mtl": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "unknown",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:d2b1eaa20c7fe3a999e2a478f6df97d6ba213d4c3655c26489557c612f7b28a6",
+      "shipped": false,
+      "size": 237,
+      "source": {},
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/models/catalog/rug/rug.obj": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "unknown",
+      "referenceEvidence": [
+        "scripts/magic_carpet_game.gd"
+      ],
+      "regions": [],
+      "sha256": "sha256:85c381e11baa9a18b3bfac55502463386d230abf6fe2e4c066fcb604c98f72c0",
+      "shipped": true,
+      "size": 82499,
+      "source": {},
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [
+        "scripts/magic_carpet_game.gd"
+      ],
+      "used": true,
+      "usedBy": []
+    },
+    "assets/models/quaternius/knight/KnightCharacter.fbx": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "unknown",
+      "referenceEvidence": [
+        "scripts/magic_carpet_game.gd"
+      ],
+      "regions": [],
+      "sha256": "sha256:41f2616fb4a42f9d35e242bbed1450ededc7537def4bf38cbb11b4e54ff2bf21",
+      "shipped": true,
+      "size": 2092236,
+      "source": {},
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [
+        "scripts/magic_carpet_game.gd"
+      ],
+      "used": true,
+      "usedBy": []
+    },
+    "assets/models/quaternius/knight/KnightCharacter.mtl": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "unknown",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:fc3766421767ddb7460811c0a85b19214dc93c2fa1c8dc8026224613bc901f6a",
+      "shipped": false,
+      "size": 597,
+      "source": {},
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/models/quaternius/knight/KnightCharacter.obj": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "unknown",
+      "referenceEvidence": [
+        "scripts/magic_carpet_game.gd"
+      ],
+      "regions": [],
+      "sha256": "sha256:bae440b3d7057e68338632505f242bb762e3b248c7b296913371bf7cda9e1a30",
+      "shipped": true,
+      "size": 73952,
+      "source": {},
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [
+        "scripts/magic_carpet_game.gd"
+      ],
+      "used": true,
+      "usedBy": []
+    },
+    "assets/models/quaternius/monsters/Atlas_Monsters.png": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "unknown",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:b970ed1359ce749fd81a8395d58ff5f3044d843213e17fb94b97892d417c0af9",
+      "shipped": true,
+      "size": 9007,
+      "source": {},
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/models/quaternius/monsters/FlyingDemon.fbx": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "unknown",
+      "referenceEvidence": [
+        "scripts/magic_carpet_game.gd"
+      ],
+      "regions": [],
+      "sha256": "sha256:f2054e37e9b14fb9a476dd9aff8448d027a8195e07cd035ba9025db4d55e202d",
+      "shipped": true,
+      "size": 2150124,
+      "source": {},
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [
+        "scripts/magic_carpet_game.gd"
+      ],
+      "used": true,
+      "usedBy": []
+    },
+    "assets/models/quaternius/ruins/Arch_Gothic_RoundColumn.fbx": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "unknown",
+      "referenceEvidence": [
+        "scripts/magic_carpet_game.gd"
+      ],
+      "regions": [],
+      "sha256": "sha256:621cb5a9405789bc4092fe27c5065625a3684c24fdabc021254354def3e527db",
+      "shipped": true,
+      "size": 78508,
+      "source": {},
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [
+        "scripts/magic_carpet_game.gd"
+      ],
+      "used": true,
+      "usedBy": []
+    },
+    "assets/models/quaternius/ruins/Flag_GothicArch.fbx": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "unknown",
+      "referenceEvidence": [
+        "scripts/magic_carpet_game.gd"
+      ],
+      "regions": [],
+      "sha256": "sha256:c4f0276b818c406b2ecbeb67042e49fbbd61039ea75a3345d38cfabeb4a39183",
+      "shipped": true,
+      "size": 18524,
+      "source": {},
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [
+        "scripts/magic_carpet_game.gd"
+      ],
+      "used": true,
+      "usedBy": []
+    },
+    "assets/models/quaternius/ruins/Wall_ArchRound.fbx": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "unknown",
+      "referenceEvidence": [
+        "scripts/magic_carpet_game.gd"
+      ],
+      "regions": [],
+      "sha256": "sha256:3e9f6c6a498e9c585ad462e608bb498f0591fc6b80214de7b9281b28c3f857b5",
+      "shipped": true,
+      "size": 53100,
       "source": {},
       "status": "present",
       "transformations": [],
@@ -360,7 +1174,32 @@
     }
   },
   "discoveries": {},
-  "downloads": {},
+  "downloads": {
+    "sha256:2d6eb05c38a460a2d7fd72809637a73315fc1bb3c609e8e94d83bdb2416f1866": {
+      "catalogPath": "3d-models/vegetation/quaternius-ultimatenature/assets.zip",
+      "sha256": "sha256:483e1748fe8de6704f1780582668621312a5eaefc8ab0d177798af3ec004049f",
+      "size": 23830266,
+      "snapshotId": "catalog-20260924-japan-characters-scene-removal-v1"
+    },
+    "sha256:3d1eb0820f7d0e634f9da1a4b131d45c54684bbc4732f636d1e6d21220dedc29": {
+      "catalogPath": "3d-models/props/itch-io-4862256/assets.zip",
+      "sha256": "sha256:4f6f65d17ab8f6a65fb7a2edb50232eb5ec6ad6ddf02f73d9b6aeed0e50626f2",
+      "size": 6835614,
+      "snapshotId": "catalog-20260924-japan-characters-scene-removal-v1"
+    },
+    "sha256:92833953d60162a8ba5f7025f204e685fbd47155308e2753d40abdc8549e520e": {
+      "catalogPath": "3d-models/architecture/itch-io-2177920/assets.zip",
+      "sha256": "sha256:15cb45abbcb3b7982c00537796f6824bbcdc28a1b85746b2f6aaea7aa26e115b",
+      "size": 119581,
+      "snapshotId": "catalog-20260924-japan-characters-scene-removal-v1"
+    },
+    "sha256:fd33bd723f77ced0453e70fef9d2793c7265963689249e0daaef2dba2d68a36b": {
+      "catalogPath": "3d-models/cross-category/itch-io-2185222/assets.zip",
+      "sha256": "sha256:982fd1f9f044f4821f4c1fa23461f0a4b299171ff3ca2a4689f664abf99cf80a",
+      "size": 65398005,
+      "snapshotId": "catalog-20260924-japan-characters-scene-removal-v1"
+    }
+  },
   "export": {
     "coverage": "verified",
     "hostMedia": [
@@ -395,9 +1234,9 @@
         ]
       }
     ],
-    "pckSha256": "sha256:68b2ad9232b273ef9a29bf292356caae77bfa0191bbb771fcf4245a4b5d40681",
+    "pckSha256": "sha256:584c7074e095e235c12fed5a4050d0c8e2b68161dc65c6530b2d6b10be5e9930",
     "profile": "release",
-    "sourceFingerprint": "sha256:a35f648088141b73acd5bdf7a720c3a5aff3d789b4b5f51fe43df1c0b8449a8e"
+    "sourceFingerprint": "sha256:704bd453e380e8db43469caa340e7a22b617b416238df44bb498b4ef94590f62"
   },
   "procedures": {},
   "summary": {
@@ -408,9 +1247,9 @@
         "used": 0
       },
       "catalog": {
-        "retained": 0,
-        "shipped": 0,
-        "used": 0
+        "retained": 8,
+        "shipped": 8,
+        "used": 5
       },
       "procedural": {
         "retained": 0,
@@ -429,10 +1268,10 @@
       "unmatchedSourcePaths": 3
     },
     "files": {
-      "downloaded": 0,
-      "retained": 17,
-      "shipped": 17,
-      "used": 4
+      "downloaded": 8,
+      "retained": 40,
+      "shipped": 38,
+      "used": 18
     },
     "origins": {
       "ai": {
@@ -441,9 +1280,9 @@
         "used": 0
       },
       "catalog": {
-        "retained": 0,
-        "shipped": 0,
-        "used": 0
+        "retained": 8,
+        "shipped": 8,
+        "used": 5
       },
       "derivative": {
         "retained": 0,
@@ -466,16 +1305,16 @@
         "used": 2
       },
       "unknown": {
-        "retained": 2,
-        "shipped": 2,
-        "used": 2
+        "retained": 17,
+        "shipped": 15,
+        "used": 11
       }
     },
     "packs": {
       "discovered": 0,
-      "downloaded": 0,
-      "shipped": 0,
-      "used": 0
+      "downloaded": 4,
+      "shipped": 3,
+      "used": 3
     },
     "proceduralSystems": {
       "retained": 0,

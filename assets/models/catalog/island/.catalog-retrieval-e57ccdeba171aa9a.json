@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "archiveSha256": "15cb45abbcb3b7982c00537796f6824bbcdc28a1b85746b2f6aaea7aa26e115b",
+  "archiveSizeBytes": 119581,
+  "members": [
+    {
+      "member": "fbx/island_small.fbx",
+      "sha256": "f3f9ce6ad934035ab4351b15f560dfbfcc3611f7f7ab414db2edee00a442b4f0",
+      "sizeBytes": 47676
+    }
+  ],
+  "dependencyCoverage": "glb-gltf-obj-mtl-textureatlas-bmfont-tiled",
+  "limitations": [
+    ".fbx"
+  ],
+  "catalogSources": [
+    {
+      "snapshotId": "catalog-20260924-japan-characters-scene-removal-v1",
+      "catalogPath": "3d-models/architecture/itch-io-2177920/assets.zip"
+    }
+  ],
+  "catalogMetadata": [
+    {
+      "snapshotId": "catalog-20260924-japan-characters-scene-removal-v1",
+      "catalogPath": "3d-models/architecture/itch-io-2177920/assets.zip",
+      "metadataPath": "3d-models/architecture/itch-io-2177920/metadata.json",
+      "metadataSha256": "6a38be14de07ed738a2c3d4f0448fe9f7b20e54d937908fa82362cc42458fbb7",
+      "archiveSha256": "15cb45abbcb3b7982c00537796f6824bbcdc28a1b85746b2f6aaea7aa26e115b",
+      "source": {
+        "packId": "itch-io:2177920",
+        "name": "Floating Fungi: Low-Poly Mushroom Islands Asset Pack",
+        "url": "https://dumivid.itch.io/floating-fungi-low-poly-mushroom-islands-asset-pack",
+        "metadataPath": "3d-models/architecture/itch-io-2177920/metadata.json",
+        "metadataSha256": "sha256:6a38be14de07ed738a2c3d4f0448fe9f7b20e54d937908fa82362cc42458fbb7"
+      },
+      "license": {
+        "id": "CC0-1.0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attributionRequired": false,
+        "copyrightNoticeRequired": false,
+        "licenseNoticeRequired": false,
+        "modificationNoticeRequired": false,
+        "commercialUseAllowed": true,
+        "editableProjectDistributionAllowed": true,
+        "reusableTemplateDistributionAllowed": true
+      }
+    }
+  ]
+}

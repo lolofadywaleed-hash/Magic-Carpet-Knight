@@ -3,7 +3,7 @@
   "engineVersion": "4.7.2.stable.official.ed1daf0bf",
   "inputs": {
     "objectFormat": "sha1",
-    "tree": "ac3a473b83a3c0a132c978fadf9a51d9e5df7c13",
+    "tree": "cdd73475d05ddc196546d40a6dd1c5fcebcaac91",
     "entries": [
       {
         "path": ".github/workflows/android-apk.yml",
@@ -15,7 +15,7 @@
         "path": ".gitignore",
         "type": "file",
         "mode": "100644",
-        "object": "2b3dc53e350c05433de8e444dd975080c29adfa1"
+        "object": "bbbe971a85ae55332633359a37bf307b632fdaad"
       },
       {
         "path": ".manus-game-template.json",
@@ -30,16 +30,44 @@
         "object": "08c61c392fc489109cc8c0947f210cdb92e44a67"
       },
       {
+        "path": "ASSET_CREDITS.md",
+        "type": "file",
+        "mode": "100644",
+        "object": "4e04f627c66682b00709769aae60aa4636620281"
+      },
+      {
         "path": "README.md",
         "type": "file",
         "mode": "100644",
-        "object": "0a7176319c9cf187f191d57b0ffc9ebed0687ba7"
+        "object": "55e0ff2e38d29bcfadae2b3b0ede4028f3d789f7"
       },
       {
         "path": "assets.lock.json",
         "type": "file",
         "mode": "100644",
-        "object": "a118c0e8af2fba2c1dd1e6730fb36cf8ab4e0cf7"
+        "object": "643d498fbc09894479c583a4be68358afbce587f"
+      },
+      {
+        "path": "assets/audio/collect.wav",
+        "type": "managed",
+        "sha256": "sha256:570f162b94e18f2036874e4dc9d7eb481c3a4ecae176de50e8d1271a66b58255"
+      },
+      {
+        "path": "assets/audio/collect.wav.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "3240cd44294e58071e085867e32eaabca15905d1"
+      },
+      {
+        "path": "assets/audio/impact.wav",
+        "type": "managed",
+        "sha256": "sha256:99f8897d1c5e91ab8aaffbf236fe90f7bd7e14fd75f0257575a02d0f0db9af5b"
+      },
+      {
+        "path": "assets/audio/impact.wav.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "6ddc730f22aad05d236037e258866aec34867316"
       },
       {
         "path": "assets/fonts/NotoSansArabic-OFL.txt",
@@ -57,6 +85,251 @@
         "type": "file",
         "mode": "100644",
         "object": "9d139f2214d8923301a2e65baf6ae1689df1e4ab"
+      },
+      {
+        "path": "assets/models/catalog/gate/.catalog-retrieval-a339ea9e3abffee6.json",
+        "type": "file",
+        "mode": "100644",
+        "object": "55d62b14723eeb3d861b11b16568ace541dc8f69"
+      },
+      {
+        "path": "assets/models/catalog/gate/basecolor_gate.png",
+        "type": "managed",
+        "sha256": "sha256:a50007d37792746d111eb0b8ffa7d28330cb518f2085803c8af91027144c0d2d"
+      },
+      {
+        "path": "assets/models/catalog/gate/basecolor_gate.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "dd979d773455275a4815501de48e8497bed76499"
+      },
+      {
+        "path": "assets/models/catalog/gate/gate.glb",
+        "type": "managed",
+        "sha256": "sha256:c89bf85d687cfa6f016f329dc41c59ee753dcbbf2fdb447a1852b007960c74a2"
+      },
+      {
+        "path": "assets/models/catalog/gate/gate.glb.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "99174c2dde86bd0262b43d7f1c89a7091bdd5f1f"
+      },
+      {
+        "path": "assets/models/catalog/gate/gate_basecolor_gate.png",
+        "type": "managed",
+        "sha256": "sha256:a50007d37792746d111eb0b8ffa7d28330cb518f2085803c8af91027144c0d2d"
+      },
+      {
+        "path": "assets/models/catalog/gate/gate_basecolor_gate.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "8b285b5953d54bd0242e45239af40d8901bfe3ff"
+      },
+      {
+        "path": "assets/models/catalog/gate/gate_metallic_gate.png",
+        "type": "managed",
+        "sha256": "sha256:f98efc357e2583a047fec87ac5ffc9f0a400d8d792da93fa33fd4c7c823bb646"
+      },
+      {
+        "path": "assets/models/catalog/gate/gate_metallic_gate.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "e21502eb2cbb7f33efbfc812523b537a406667af"
+      },
+      {
+        "path": "assets/models/catalog/gate/gate_normal_gate.png",
+        "type": "managed",
+        "sha256": "sha256:f6c9ed5addc9a5ffb3c69997621e310cf73561d60dfd311c01cdd946e59f3290"
+      },
+      {
+        "path": "assets/models/catalog/gate/gate_normal_gate.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "3e8a4eeb8d787c109b21f783a7b1393719eb05d9"
+      },
+      {
+        "path": "assets/models/catalog/gate/metallic_gate.png",
+        "type": "managed",
+        "sha256": "sha256:aa6466a60bad14df27b26af79395b88cd627f26f11aa2d78ff0e848bfa0425af"
+      },
+      {
+        "path": "assets/models/catalog/gate/metallic_gate.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "1b2cdd33404eec4d347477d70a2cf7706d9f87fb"
+      },
+      {
+        "path": "assets/models/catalog/gate/normal_gate.png",
+        "type": "managed",
+        "sha256": "sha256:f6c9ed5addc9a5ffb3c69997621e310cf73561d60dfd311c01cdd946e59f3290"
+      },
+      {
+        "path": "assets/models/catalog/gate/normal_gate.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "1a5483c26998aa2ec1aa06f326145dfe9754dc50"
+      },
+      {
+        "path": "assets/models/catalog/island/.catalog-retrieval-e57ccdeba171aa9a.json",
+        "type": "file",
+        "mode": "100644",
+        "object": "31b792e7521be1d165ff0cb34b83f080566c33fe"
+      },
+      {
+        "path": "assets/models/catalog/island/fbx/island_small.fbx",
+        "type": "managed",
+        "sha256": "sha256:f3f9ce6ad934035ab4351b15f560dfbfcc3611f7f7ab414db2edee00a442b4f0"
+      },
+      {
+        "path": "assets/models/catalog/island/fbx/island_small.fbx.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "a1bcbd08b758ee3081d672d47664faadce804908"
+      },
+      {
+        "path": "assets/models/catalog/rocks/.catalog-retrieval-7876aee5244d088b.json",
+        "type": "file",
+        "mode": "100644",
+        "object": "433762d8b471bd6319037f2c3158e065876d70b6"
+      },
+      {
+        "path": "assets/models/catalog/rocks/FBX__Rock_1.fbx",
+        "type": "managed",
+        "sha256": "sha256:8a6e150e2d71dd601daf48d7967e273e940347a4826c2004b71ed1a9fa99c962"
+      },
+      {
+        "path": "assets/models/catalog/rocks/FBX__Rock_1.fbx.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "f70bd42a8c6be91b2e29ca45c944a507e3eab914"
+      },
+      {
+        "path": "assets/models/catalog/rocks/FBX__Rock_4.fbx",
+        "type": "managed",
+        "sha256": "sha256:a914a59150ad1c12ff01ffc11de22b826fee9d52dabeb703fb43e7bde1f04e1d"
+      },
+      {
+        "path": "assets/models/catalog/rocks/FBX__Rock_4.fbx.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "58d871728bdde8d381f98ff02f39be79544652ca"
+      },
+      {
+        "path": "assets/models/catalog/rocks/FBX__Rock_Moss_2.fbx",
+        "type": "managed",
+        "sha256": "sha256:9e6bb49e692da8c21c6cf5cdb77bcf6b9956edb55e1719a265524f7007fc717c"
+      },
+      {
+        "path": "assets/models/catalog/rocks/FBX__Rock_Moss_2.fbx.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "afcfd600d475c94aaa151b88c875fc239ce69fdf"
+      },
+      {
+        "path": "assets/models/catalog/rug/.catalog-retrieval-1d20b2efce942640.json",
+        "type": "file",
+        "mode": "100644",
+        "object": "563dd8b1c9fe073ae2ea8895e0f204dfd42f43b0"
+      },
+      {
+        "path": "assets/models/catalog/rug/rug.mtl",
+        "type": "file",
+        "mode": "100644",
+        "object": "cdc3fa680048667a6c72a7b88e2ba0ae66678138"
+      },
+      {
+        "path": "assets/models/catalog/rug/rug.obj",
+        "type": "managed",
+        "sha256": "sha256:85c381e11baa9a18b3bfac55502463386d230abf6fe2e4c066fcb604c98f72c0"
+      },
+      {
+        "path": "assets/models/catalog/rug/rug.obj.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "baf939f32dc933633fe385f945dbbc1671747b0c"
+      },
+      {
+        "path": "assets/models/quaternius/knight/KnightCharacter.fbx",
+        "type": "managed",
+        "sha256": "sha256:41f2616fb4a42f9d35e242bbed1450ededc7537def4bf38cbb11b4e54ff2bf21"
+      },
+      {
+        "path": "assets/models/quaternius/knight/KnightCharacter.fbx.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "d0da4787017947c0a7e5ddc7674d8f4f6a29d3e6"
+      },
+      {
+        "path": "assets/models/quaternius/knight/KnightCharacter.mtl",
+        "type": "file",
+        "mode": "100644",
+        "object": "e0dfe14c106691616aa0466678b9b406ce014d1f"
+      },
+      {
+        "path": "assets/models/quaternius/knight/KnightCharacter.obj",
+        "type": "managed",
+        "sha256": "sha256:bae440b3d7057e68338632505f242bb762e3b248c7b296913371bf7cda9e1a30"
+      },
+      {
+        "path": "assets/models/quaternius/knight/KnightCharacter.obj.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "443e93599e3bccf8c277822930b1622ce7950ad8"
+      },
+      {
+        "path": "assets/models/quaternius/monsters/Atlas_Monsters.png",
+        "type": "managed",
+        "sha256": "sha256:b970ed1359ce749fd81a8395d58ff5f3044d843213e17fb94b97892d417c0af9"
+      },
+      {
+        "path": "assets/models/quaternius/monsters/Atlas_Monsters.png.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "165fce11d296a239d496c47d34e2b7dc27181d58"
+      },
+      {
+        "path": "assets/models/quaternius/monsters/FlyingDemon.fbx",
+        "type": "managed",
+        "sha256": "sha256:f2054e37e9b14fb9a476dd9aff8448d027a8195e07cd035ba9025db4d55e202d"
+      },
+      {
+        "path": "assets/models/quaternius/monsters/FlyingDemon.fbx.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "4553ef7b714e904bd5de1029872dc5df5ce1a54e"
+      },
+      {
+        "path": "assets/models/quaternius/ruins/Arch_Gothic_RoundColumn.fbx",
+        "type": "managed",
+        "sha256": "sha256:621cb5a9405789bc4092fe27c5065625a3684c24fdabc021254354def3e527db"
+      },
+      {
+        "path": "assets/models/quaternius/ruins/Arch_Gothic_RoundColumn.fbx.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "3456ad285dbe86f618a87d3208ca213406069e28"
+      },
+      {
+        "path": "assets/models/quaternius/ruins/Flag_GothicArch.fbx",
+        "type": "managed",
+        "sha256": "sha256:c4f0276b818c406b2ecbeb67042e49fbbd61039ea75a3345d38cfabeb4a39183"
+      },
+      {
+        "path": "assets/models/quaternius/ruins/Flag_GothicArch.fbx.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "be6295777f1467bcc1a6d4fe285e3683b97507f3"
+      },
+      {
+        "path": "assets/models/quaternius/ruins/Wall_ArchRound.fbx",
+        "type": "managed",
+        "sha256": "sha256:3e9f6c6a498e9c585ad462e608bb498f0591fc6b80214de7b9281b28c3f857b5"
+      },
+      {
+        "path": "assets/models/quaternius/ruins/Wall_ArchRound.fbx.import",
+        "type": "file",
+        "mode": "100644",
+        "object": "2eef603e484724957a5c58b7af19f13a42910661"
       },
       {
         "path": "assets/share/favicon.png",
@@ -544,7 +817,7 @@
         "path": "scripts/magic_carpet_game.gd",
         "type": "file",
         "mode": "100644",
-        "object": "51171cb00a1a5b41bc627511ecf124b3f019125f"
+        "object": "91397e9a27fb8e0eb25f6a69c889fb518b0e52e9"
       },
       {
         "path": "scripts/magic_carpet_game.gd.uid",
@@ -939,7 +1212,7 @@
     ]
   },
   "build": {
-    "snapshotId": "sha256:9b6524e58d7468a8f4b908dabe49829e3c74967443f3ed968b0c6876eeacbcca",
+    "snapshotId": "sha256:f878bf367676a5818ec8c3810126f6af4a5f7854f3c42c5d83cd5c8ad2b25a22",
     "toolchain": {
       "engineVersion": "4.7.2.stable.official.ed1daf0bf",
       "engineDigest": "sha256:8d106cbe6144c2dc7e881d61d2429c1a8a76e6b22ef48bd5e48dcf934953f71e",
@@ -952,21 +1225,21 @@
     "profile": "release",
     "export": {
       "profile": "release",
-      "snapshotId": "sha256:9b6524e58d7468a8f4b908dabe49829e3c74967443f3ed968b0c6876eeacbcca",
+      "snapshotId": "sha256:f878bf367676a5818ec8c3810126f6af4a5f7854f3c42c5d83cd5c8ad2b25a22",
       "files": {
         "THIRD_PARTY_NOTICES.txt": "sha256:ed92c36308bfe5f886bea86cbc42fd034b9340a28db433993742908fddda2f5a",
         "index.apple-touch-icon.png": "sha256:1924cd41169667221e71f79978263aec23c08bf738c8179b741baedad114e25c",
         "index.audio.position.worklet.js": "sha256:be33985bc7160d6bf9646f259cd86b259cd67b02ccb297ee5c44f8ac84327bc8",
         "index.audio.worklet.js": "sha256:5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3",
-        "index.html": "sha256:0ba607c8e71cda46c0a0eaab5aebc8e8775c174227092dbd2cb0f551d4bb9508",
+        "index.html": "sha256:1187f4f7dff64bafec976a090b3c964a366a04a55e26adff95afa18a2d6cf4e7",
         "index.icon.png": "sha256:27b4787880ad8c7246fe2ad61d222f991a0edb12beb3ef4512204431511e07cc",
         "index.js": "sha256:cb28c2d8ffd8981888823f1b6d98cdec4e3e11adf209ad556c22878e6d51c63a",
-        "index.pck": "sha256:68b2ad9232b273ef9a29bf292356caae77bfa0191bbb771fcf4245a4b5d40681",
+        "index.pck": "sha256:584c7074e095e235c12fed5a4050d0c8e2b68161dc65c6530b2d6b10be5e9930",
         "index.png": "sha256:3cb4495c0b98dfbe4b663cbf2b6836473572339beb66d902367893162a70be0e",
         "index.wasm": "sha256:fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0",
         "open-source-licenses.html": "sha256:39c69bce7ef5caedd92425e041946b3b276278f80673330ad02973eee01e9114"
       },
-      "digest": "sha256:995ee7209f671f2e325fbea1bd9b4d6122f039416ba31acfc2943b1ebb6d4680"
+      "digest": "sha256:aa6e45f3ab9a03edc83ba48cfad55ae2ec1c2866f209589d9decb69f7432149b"
     }
   },
   "artifacts": {
@@ -975,17 +1248,17 @@
       "sha256": "sha256:fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
     },
     "pck": {
-      "path": "/manus-storage/game/sha256/68b2ad9232b273ef9a29bf292356caae77bfa0191bbb771fcf4245a4b5d40681.pck",
-      "sha256": "sha256:68b2ad9232b273ef9a29bf292356caae77bfa0191bbb771fcf4245a4b5d40681"
+      "path": "/manus-storage/game/sha256/584c7074e095e235c12fed5a4050d0c8e2b68161dc65c6530b2d6b10be5e9930.pck",
+      "sha256": "sha256:584c7074e095e235c12fed5a4050d0c8e2b68161dc65c6530b2d6b10be5e9930"
     }
   },
   "files": {
     "THIRD_PARTY_NOTICES.txt": "sha256:ed92c36308bfe5f886bea86cbc42fd034b9340a28db433993742908fddda2f5a",
-    "game-sharing.json": "sha256:cfdf17db5a5c66ffdd362f5fa2ef19055a766e4e384d052cc7a91f29b1272513",
+    "game-sharing.json": "sha256:5796cedc64df020ed989f257daad0d5d7d3494926615ffc845c4e1a664910ff4",
     "index.apple-touch-icon.png": "sha256:1924cd41169667221e71f79978263aec23c08bf738c8179b741baedad114e25c",
     "index.audio.position.worklet.js": "sha256:be33985bc7160d6bf9646f259cd86b259cd67b02ccb297ee5c44f8ac84327bc8",
     "index.audio.worklet.js": "sha256:5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3",
-    "index.html": "sha256:ff38b7e35cc4cad72b7d372193efe3e01079438c89b2ce043b561d2567b81065",
+    "index.html": "sha256:6c2dbedfe86384d1c26fa9c8b79d9d1d2a64140b5be9da5bbb518f18e4a663b6",
     "index.icon.png": "sha256:27b4787880ad8c7246fe2ad61d222f991a0edb12beb3ef4512204431511e07cc",
     "index.js": "sha256:cb28c2d8ffd8981888823f1b6d98cdec4e3e11adf209ad556c22878e6d51c63a",
     "index.png": "sha256:3cb4495c0b98dfbe4b663cbf2b6836473572339beb66d902367893162a70be0e",

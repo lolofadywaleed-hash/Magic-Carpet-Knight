@@ -1,8 +1,8 @@
 class_name MagicCarpetGame
 extends Node3D
-## Magic Carpet Knight: a focused, procedural 3D endless-runner slice.
-## Visuals are intentionally composed from Godot meshes rather than claiming
-## professional character models. Gameplay authority stays in this node.
+## Magic Carpet Knight: stylized fantasy 3D endless runner.
+## Gameplay remains owned by this node while imported free models provide the
+## visible knight, flying monster, rocks, ruins, gate and sky landmarks.
 
 enum GameState { TITLE, PLAYING, PAUSED, GAME_OVER }
 
@@ -12,6 +12,24 @@ const TRACK_GAP := 14.0
 const TRACK_COUNT := 15
 const HAZARD_COUNT := 20
 const GEM_COUNT := 30
+const KNIGHT_FBX := "res://assets/models/quaternius/knight/KnightCharacter.fbx"
+const KNIGHT_OBJ := "res://assets/models/quaternius/knight/KnightCharacter.obj"
+const FLYING_DEMON_MODEL := "res://assets/models/quaternius/monsters/FlyingDemon.fbx"
+const GATE_MODEL := "res://assets/models/catalog/gate/gate.glb"
+const RUG_MODEL := "res://assets/models/catalog/rug/rug.obj"
+const ISLAND_MODEL := "res://assets/models/catalog/island/fbx/island_small.fbx"
+const ROCK_MODELS := [
+	"res://assets/models/catalog/rocks/FBX__Rock_1.fbx",
+	"res://assets/models/catalog/rocks/FBX__Rock_4.fbx",
+	"res://assets/models/catalog/rocks/FBX__Rock_Moss_2.fbx",
+]
+const RUIN_MODELS := [
+	"res://assets/models/quaternius/ruins/Arch_Gothic_RoundColumn.fbx",
+	"res://assets/models/quaternius/ruins/Wall_ArchRound.fbx",
+	"res://assets/models/quaternius/ruins/Flag_GothicArch.fbx",
+]
+const COLLECT_SOUND := "res://assets/audio/collect.wav"
+const IMPACT_SOUND := "res://assets/audio/impact.wav"
 var ui_font: Font
 var ui_bold: Font
 
@@ -37,6 +55,8 @@ var elapsed := 0.0
 var last_score_text := ""
 var swipe_start := Vector2.ZERO
 var pulse_time := 0.0
+var collect_player: AudioStreamPlayer
+var impact_player: AudioStreamPlayer
 
 var title_layer: CanvasLayer
 var hud_layer: CanvasLayer
@@ -63,6 +83,7 @@ func _ready() -> void:
 	ui_bold = ui_font
 	rng.seed = 20261107
 	best_score = _load_best_score()
+	_build_audio()
 	_build_world()
 	_build_ui()
 	_show_title()
@@ -115,6 +136,18 @@ func _handle_swipe(delta: Vector2) -> void:
 		_change_lane(1 if delta.x > 0.0 else -1)
 	else:
 		_change_height(1 if delta.y < 0.0 else -1)
+
+func _build_audio() -> void:
+	collect_player = AudioStreamPlayer.new()
+	collect_player.name = "CollectSound"
+	collect_player.stream = load(COLLECT_SOUND)
+	collect_player.volume_db = -5.0
+	add_child(collect_player)
+	impact_player = AudioStreamPlayer.new()
+	impact_player.name = "ImpactSound"
+	impact_player.stream = load(IMPACT_SOUND)
+	impact_player.volume_db = -4.0
+	add_child(impact_player)
 
 func _build_world() -> void:
 	world_root = Node3D.new()
@@ -177,11 +210,27 @@ func _create_track() -> void:
 func _create_background() -> void:
 	var mountain_material := _material(Color("1a2c68"), 0.05, Color("0b123d"), 0.25)
 	var cloud_material := _material(Color("b4d9ff"), 0.0, Color("6e9ce8"), 0.6)
+	var specs := [
+		[ISLAND_MODEL, Vector3(-12.0, -2.1, -58.0), Vector3(2.8, 2.8, 2.8), 0.18],
+		[ISLAND_MODEL, Vector3(14.0, -1.8, -112.0), Vector3(3.4, 3.4, 3.4), -0.26],
+		[RUIN_MODELS[0], Vector3(-12.5, 1.4, -92.0), Vector3(0.9, 0.9, 0.9), 0.4],
+		[RUIN_MODELS[1], Vector3(13.5, 2.0, -154.0), Vector3(0.85, 0.85, 0.85), -0.3],
+		[RUIN_MODELS[2], Vector3(-15.0, 2.4, -214.0), Vector3(1.2, 1.2, 1.2), 0.1],
+	]
+	for index in specs.size():
+		var spec: Array = specs[index]
+		var prop := Node3D.new()
+		prop.name = "ImportedLandmark_%02d" % index
+		if not _load_model(prop, String(spec[0]), Vector3(spec[2]), Vector3.ZERO, Vector3(0.0, float(spec[3]), 0.0)):
+			prop.queue_free()
+			continue
+		prop.position = Vector3(spec[1])
+		world_root.add_child(prop)
+		background_props.append(prop)
 	for index in 18:
 		var prop := Node3D.new()
-		prop.name = "SkyLandmark_%02d" % index
-		var is_cloud := index % 3 == 0
-		if is_cloud:
+		prop.name = "SkyCloudOrMountain_%02d" % index
+		if index % 3 == 0:
 			var cloud := SphereMesh.new()
 			cloud.radius = 1.5
 			cloud.height = 2.5
@@ -191,7 +240,7 @@ func _create_background() -> void:
 			peak.top_radius = 0.1
 			peak.bottom_radius = 2.4
 			peak.height = 4.8
-			_add_mesh(prop, peak, mountain_material, Vector3.ZERO, Vector3(1.0, 1.0, 1.0))
+			_add_mesh(prop, peak, mountain_material)
 		prop.position = Vector3(rng.randf_range(-20.0, 20.0), rng.randf_range(5.0, 10.5), -20.0 - float(index) * 20.0)
 		world_root.add_child(prop)
 		background_props.append(prop)
@@ -202,16 +251,18 @@ func _create_player() -> void:
 	player.position = Vector3(0.0, HEIGHT_Y[height_index], 0.0)
 	world_root.add_child(player)
 	player_model = Node3D.new()
-	player_model.name = "KnightAndCarpet"
+	player_model.name = "ImportedKnightAndMagicCarpet"
 	player.add_child(player_model)
 	carpet_model = Node3D.new()
 	carpet_model.name = "MagicCarpet"
 	player_model.add_child(carpet_model)
 	var carpet_material := _material(Color("b83f9f"), 0.35, Color("38104b"), 0.7)
 	var carpet_trim := _material(Color("f5bd5c"), 0.75, Color("8a4b20"), 0.3)
-	var carpet := PlaneMesh.new()
-	carpet.size = Vector2(4.7, 1.7)
-	_add_mesh(carpet_model, carpet, carpet_material, Vector3(0.0, -0.85, 0.0))
+	var rug_loaded := _load_model(carpet_model, RUG_MODEL, Vector3(2.65, 1.0, 1.0), Vector3(0.0, -0.82, 0.0), Vector3(PI * 0.5, 0.0, 0.0))
+	if not rug_loaded:
+		var carpet := PlaneMesh.new()
+		carpet.size = Vector2(4.7, 1.7)
+		_add_mesh(carpet_model, carpet, carpet_material, Vector3(0.0, -0.85, 0.0))
 	var carpet_base := BoxMesh.new()
 	carpet_base.size = Vector3(4.55, 0.1, 1.6)
 	_add_mesh(carpet_model, carpet_base, carpet_trim, Vector3(0.0, -0.91, 0.0))
@@ -221,34 +272,16 @@ func _create_player() -> void:
 		tassel.bottom_radius = 0.07
 		tassel.height = 0.42
 		_add_mesh(carpet_model, tassel, carpet_trim, Vector3(x, -0.98, 0.0), Vector3.ONE, Vector3(PI * 0.5, 0.0, 0.0))
-	var body_material := _material(Color("d4e5ff"), 0.8, Color("2b5a9a"), 0.4)
-	var cape_material := _material(Color("ef4d72"), 0.25, Color("631d52"), 0.25)
-	var gold_material := _material(Color("ffc45b"), 0.9, Color("9d4b1e"), 0.35)
-	var steel_material := _material(Color("d8e4ef"), 0.95, Color("90c9ff"), 0.55)
-	var torso := CapsuleMesh.new()
-	torso.radius = 0.36
-	torso.height = 1.2
-	_add_mesh(player_model, torso, body_material, Vector3(0.0, 0.15, 0.0))
-	var helmet := SphereMesh.new()
-	helmet.radius = 0.43
-	helmet.height = 0.78
-	_add_mesh(player_model, helmet, steel_material, Vector3(0.0, 0.9, 0.0), Vector3(1.0, 0.95, 0.95))
-	var visor := BoxMesh.new()
-	visor.size = Vector3(0.52, 0.12, 0.16)
-	_add_mesh(player_model, visor, _material(Color("101b3b")), Vector3(0.0, 0.88, -0.34))
-	var cape := SphereMesh.new()
-	cape.radius = 0.46
-	cape.height = 1.1
-	_add_mesh(player_model, cape, cape_material, Vector3(0.0, 0.05, 0.35), Vector3(1.0, 1.1, 0.28))
-	var sword_hilt := CylinderMesh.new()
-	sword_hilt.top_radius = 0.07
-	sword_hilt.bottom_radius = 0.07
-	sword_hilt.height = 0.65
-	_add_mesh(player_model, sword_hilt, gold_material, Vector3(0.62, 0.55, -0.02), Vector3.ONE, Vector3(0.0, 0.0, -0.25))
-	var blade := BoxMesh.new()
-	blade.size = Vector3(0.1, 0.9, 0.17)
-	_add_mesh(player_model, blade, steel_material, Vector3(0.76, 1.16, -0.02), Vector3.ONE, Vector3(0.0, 0.0, -0.25))
+	var ornament := TorusMesh.new()
+	ornament.inner_radius = 0.28
+	ornament.outer_radius = 0.36
+	ornament.rings = 16
+	ornament.ring_segments = 8
+	_add_mesh(carpet_model, ornament, carpet_trim, Vector3(0.0, -0.82, -0.3), Vector3(1.0, 0.35, 1.0), Vector3(PI * 0.5, 0.0, 0.0))
+	if not _load_model(player_model, KNIGHT_FBX, Vector3(0.72, 0.72, 0.72), Vector3(0.0, -0.18, 0.0), Vector3.ZERO):
+		_load_model(player_model, KNIGHT_OBJ, Vector3(0.72, 0.72, 0.72), Vector3(0.0, -0.18, 0.0), Vector3.ZERO)
 	var light := OmniLight3D.new()
+	light.name = "CarpetGlow"
 	light.light_color = Color("ff71dc")
 	light.light_energy = 1.2
 	light.omni_range = 5.0
@@ -257,48 +290,56 @@ func _create_player() -> void:
 
 func _create_items() -> void:
 	for index in HAZARD_COUNT:
-		var kind := "gate" if index % 4 == 1 else "rock"
+		var kind := _hazard_kind(index)
 		var item := _make_hazard(kind, index)
-		var data := {"node": item, "kind": kind, "lane": 1, "height": 1}
+		var data := {"node": item, "kind": kind, "lane": 1, "height": 1, "serial": index}
 		hazards.append(data)
 		world_root.add_child(item)
 	for index in GEM_COUNT:
 		var item := _make_gem(index)
-		var data := {"node": item, "lane": 1, "height": 1, "collected": false}
+		var data := {"node": item, "lane": 1, "height": 1, "collected": false, "serial": index}
 		gems.append(data)
 		world_root.add_child(item)
 	_reset_items()
 
+func _hazard_kind(index: int) -> String:
+	match index % 8:
+		0, 4:
+			return "rock"
+		1, 6:
+			return "gate"
+		2, 7:
+			return "flying"
+		_:
+			return "ruins"
+
 func _make_hazard(kind: String, index: int) -> Node3D:
 	var root := Node3D.new()
 	root.name = "%s_%02d" % [kind.capitalize(), index]
-	if kind == "rock":
-		var rock_material := _material(Color("6d5a9b"), 0.15, Color("271d5e"), 0.25)
-		var rock := SphereMesh.new()
-		rock.radius = 0.9
-		rock.height = 1.55
-		_add_mesh(root, rock, rock_material, Vector3(0.0, 0.0, 0.0), Vector3(1.25, 0.9, 1.1))
-		var shard := CylinderMesh.new()
-		shard.top_radius = 0.0
-		shard.bottom_radius = 0.34
-		shard.height = 1.1
-		_add_mesh(root, shard, rock_material, Vector3(0.25, 0.55, -0.15), Vector3(1.0, 1.0, 0.8), Vector3(0.12, 0.2, -0.18))
-	else:
-		var gate_material := _material(Color("ef63cb"), 0.45, Color("8c2b9e"), 1.8)
-		var gold := _material(Color("ffd66b"), 0.82, Color("bd5d20"), 0.8)
-		var pillar := CylinderMesh.new()
-		pillar.top_radius = 0.18
-		pillar.bottom_radius = 0.28
-		pillar.height = 2.8
-		_add_mesh(root, pillar, gate_material, Vector3(-1.3, 0.0, 0.0))
-		_add_mesh(root, pillar, gate_material, Vector3(1.3, 0.0, 0.0))
-		var arch := TorusMesh.new()
-		arch.inner_radius = 1.05
-		arch.outer_radius = 1.28
-		arch.rings = 20
-		arch.ring_segments = 12
-		_add_mesh(root, arch, gold, Vector3(0.0, 0.55, 0.0), Vector3(1.0, 1.0, 1.0), Vector3(PI * 0.5, 0.0, 0.0))
-	root.set_meta("spin_rate", 0.35 + float(index % 3) * 0.1)
+	var model_path := ""
+	var model_scale := Vector3.ONE
+	var model_position := Vector3.ZERO
+	match kind:
+		"rock":
+			model_path = String(ROCK_MODELS[index % ROCK_MODELS.size()])
+			model_scale = Vector3(2.25, 2.25, 2.25)
+			model_position = Vector3(0.0, -0.25, 0.0)
+		"gate":
+			model_path = GATE_MODEL
+			model_scale = Vector3(0.62, 0.62, 0.62)
+			model_position = Vector3(0.0, -1.0, 0.0)
+		"flying":
+			model_path = FLYING_DEMON_MODEL
+			model_scale = Vector3(0.72, 0.72, 0.72)
+			model_position = Vector3(0.0, 0.65, 0.0)
+		"ruins":
+			model_path = String(RUIN_MODELS[index % RUIN_MODELS.size()])
+			model_scale = Vector3(0.9, 0.9, 0.9)
+			model_position = Vector3(0.0, -0.65, 0.0)
+	if not _load_model(root, model_path, model_scale, model_position, Vector3.ZERO):
+		push_warning("Imported hazard model unavailable: %s" % model_path)
+	root.set_meta("spin_rate", 0.08 if kind == "flying" else 0.02)
+	root.set_meta("collision_radius", 1.75 if kind in ["gate", "ruins"] else 1.5)
 	return root
 
 func _make_gem(index: int) -> Node3D:
@@ -325,32 +366,44 @@ func _make_gem(index: int) -> Node3D:
 	return root
 
 func _reset_items() -> void:
-	var z := -28.0
+	var z := -30.0
+	var lane_pattern := [0, 2, 1, 1, 0, 2, 2, 0]
+	var height_pattern := [0, 1, 2, 1, 2, 0, 1, 2]
+	var previous_lane := -1
 	for index in hazards.size():
 		var data: Dictionary = hazards[index]
-		data["lane"] = rng.randi_range(0, 2)
-		data["height"] = rng.randi_range(0, 2)
+		var lane := int(lane_pattern[index % lane_pattern.size()])
+		if lane == previous_lane:
+			lane = (lane + 1) % 3
+		var height := int(height_pattern[index % height_pattern.size()])
+		data["lane"] = lane
+		data["height"] = height
+		data["serial"] = index
 		var node := data["node"] as Node3D
-		node.position = Vector3(LANE_X[int(data["lane"])], HEIGHT_Y[int(data["height"])], z)
+		node.position = Vector3(LANE_X[lane], HEIGHT_Y[height], z)
 		node.visible = true
-		z -= rng.randf_range(8.5, 12.5)
-	z = -34.0
+		previous_lane = lane
+		z -= rng.randf_range(13.5, 18.5)
+	z = -36.0
 	for index in gems.size():
 		var data: Dictionary = gems[index]
-		data["lane"] = rng.randi_range(0, 2)
-		data["height"] = rng.randi_range(0, 2)
+		var lane := (index * 2 + 1) % 3
+		var height := (index + int(index / 4)) % 3
+		data["lane"] = lane
+		data["height"] = height
+		data["serial"] = index
 		var node := data["node"] as Node3D
-		node.position = Vector3(LANE_X[int(data["lane"])], HEIGHT_Y[int(data["height"])], z)
+		node.position = Vector3(LANE_X[lane], HEIGHT_Y[height], z)
 		node.visible = true
 		data["collected"] = false
-		z -= rng.randf_range(5.0, 9.0)
+		z -= rng.randf_range(6.0, 10.0)
 
 func start_run() -> void:
 	state = GameState.PLAYING
 	lane_index = 1
 	height_index = 1
 	forward_distance = 0.0
-	speed = 11.5
+	speed = 15.5
 	score = 0
 	elapsed = 0.0
 	player.position = Vector3(0.0, HEIGHT_Y[height_index], 0.0)
@@ -358,20 +411,20 @@ func start_run() -> void:
 	_hide_all_overlays()
 	hud_layer.visible = true
 	_update_hud()
-	_show_toast("انطلق! اسحب لتغيير المسار والارتفاع")
+	_show_toast("انطلق! السرعة ترتفع تدريجيًا — اسحب للمناورة")
 
 func _update_run(delta: float) -> void:
 	elapsed += delta
 	forward_distance += speed * delta
-	speed = minf(26.0, 11.5 + elapsed * 0.42)
+	speed = minf(34.0, 15.5 + elapsed * 0.72)
 	score += int(speed * delta * 1.2)
 	player.position.x = lerpf(player.position.x, float(LANE_X[lane_index]), minf(1.0, delta * 9.0))
 	player.position.y = lerpf(player.position.y, float(HEIGHT_Y[height_index]), minf(1.0, delta * 7.0))
-	var movement_factor := sin(pulse_time * 7.0) * 0.06
+	var movement_factor := sin(pulse_time * 7.0) * 0.07
 	player_model.position.y = movement_factor
-	player_model.rotation.z = lerpf(player_model.rotation.z, float(lane_index - 1) * -0.08, delta * 4.0)
-	carpet_model.rotation.x = sin(pulse_time * 3.4) * 0.035
-	carpet_model.rotation.z = sin(pulse_time * 2.8) * 0.055
+	player_model.rotation.z = lerpf(player_model.rotation.z, float(lane_index - 1) * -0.1, delta * 5.0)
+	carpet_model.rotation.x = sin(pulse_time * 3.4) * 0.045
+	carpet_model.rotation.z = sin(pulse_time * 2.8) * 0.07
 	for segment in track_segments:
 		segment.position.z += speed * delta
 		if segment.position.z > 16.0:
@@ -401,31 +454,38 @@ func _move_item(data: Dictionary, delta: float, is_hazard: bool) -> void:
 			if node.position.distance_to(player.position) < 1.55:
 				_collect_gem(data)
 		if is_hazard and absf(node.position.z) < 1.35:
-			if absf(node.position.x - player.position.x) < 1.65 and absf(node.position.y - player.position.y) < 1.35:
+			var radius := float(node.get_meta("collision_radius", 1.5))
+			if absf(node.position.x - player.position.x) < radius and absf(node.position.y - player.position.y) < 1.4:
 				_game_over()
 	if node.position.z > 18.0:
-			_recycle_item(data, is_hazard)
+		_recycle_item(data, is_hazard)
 
 func _recycle_item(data: Dictionary, is_hazard: bool) -> void:
 	var collection: Array[Dictionary] = hazards if is_hazard else gems
-	var farthest := -28.0
+	var farthest := -30.0
 	for other in collection:
 		var other_node := other["node"] as Node3D
 		farthest = minf(farthest, other_node.position.z)
-	var lane := rng.randi_range(0, 2)
-	var height := rng.randi_range(0, 2)
+	var serial := int(data.get("serial", 0)) + 1
+	var lane := (serial * 2 + 1) % 3
+	var height := (serial + (serial / 3 if is_hazard else serial / 4)) % 3
 	var node := data["node"] as Node3D
-	node.position = Vector3(LANE_X[lane], HEIGHT_Y[height], farthest - rng.randf_range(7.0, 12.0))
+	var gap := rng.randf_range(14.0, 19.0) if is_hazard else rng.randf_range(6.0, 10.0)
+	node.position = Vector3(LANE_X[lane], HEIGHT_Y[height], farthest - gap)
 	data["lane"] = lane
 	data["height"] = height
+	data["serial"] = serial
 	data["collected"] = false
 	node.visible = true
 
 func _collect_gem(data: Dictionary) -> void:
 	data["collected"] = true
 	var node := data["node"] as Node3D
+	_spawn_burst(node.global_position, Color("70f1ff"))
 	node.visible = false
 	score += 25
+	if collect_player != null:
+		collect_player.play()
 	_show_toast("+25 جوهرة")
 
 func _game_over() -> void:
@@ -434,6 +494,9 @@ func _game_over() -> void:
 	state = GameState.GAME_OVER
 	best_score = maxi(best_score, score)
 	_save_best_score(best_score)
+	_spawn_burst(player.global_position, Color("ff557b"), true)
+	if impact_player != null:
+		impact_player.play()
 	hud_layer.visible = false
 	result_layer.visible = true
 	var panel := result_layer.get_node("Center/Panel") as PanelContainer
@@ -442,6 +505,35 @@ func _game_over() -> void:
 	score_result.text = "النتيجة: %d" % score
 	best_result.text = "أفضل نتيجة: %d" % best_score
 	_show_toast("انتهت الرحلة")
+
+func _spawn_burst(position: Vector3, color: Color, impact := false) -> void:
+	if world_root == null:
+		return
+	var burst := GPUParticles3D.new()
+	burst.name = "ImpactBurst" if impact else "GemBurst"
+	burst.amount = 24 if impact else 16
+	burst.lifetime = 0.75 if impact else 0.5
+	burst.one_shot = true
+	burst.explosiveness = 1.0
+	burst.position = position
+	var particle_material := ParticleProcessMaterial.new()
+	particle_material.direction = Vector3(0.0, 1.0, 0.0)
+	particle_material.spread = 55.0 if impact else 35.0
+	particle_material.initial_velocity_min = 3.0 if impact else 1.8
+	particle_material.initial_velocity_max = 5.0 if impact else 3.2
+	particle_material.gravity = Vector3(0.0, -5.0, 0.0)
+	particle_material.scale_min = 0.08
+	particle_material.scale_max = 0.18 if impact else 0.13
+	particle_material.color = color
+	burst.process_material = particle_material
+	var shard := SphereMesh.new()
+	shard.radius = 0.07
+	shard.height = 0.14
+	shard.material = _material(color, 0.15, color, 3.0)
+	burst.draw_pass_1 = shard
+	world_root.add_child(burst)
+	burst.emitting = true
+	get_tree().create_timer(1.2).timeout.connect(burst.queue_free)
 
 func _change_lane(delta: int) -> void:
 	if state != GameState.PLAYING:
@@ -735,6 +827,32 @@ func _add_mesh(parent: Node3D, mesh: Mesh, material: Material, position := Vecto
 	instance.rotation = rotation
 	parent.add_child(instance)
 	return instance
+
+func _load_model(parent: Node3D, path: String, scale: Vector3, position: Vector3, rotation: Vector3) -> bool:
+	if not ResourceLoader.exists(path):
+		return false
+	var resource := ResourceLoader.load(path)
+	if resource == null:
+		return false
+	var instance: Node3D
+	var packed := resource as PackedScene
+	if packed != null:
+		instance = packed.instantiate() as Node3D
+	else:
+		var mesh := resource as Mesh
+		if mesh == null:
+			return false
+		var mesh_instance := MeshInstance3D.new()
+		mesh_instance.mesh = mesh
+		instance = mesh_instance
+	if instance == null:
+		return false
+	instance.name = path.get_file().get_basename()
+	instance.scale = scale
+	instance.position = position
+	instance.rotation = rotation
+	parent.add_child(instance)
+	return true
 
 func _load_best_score() -> int:
 	var config := ConfigFile.new()

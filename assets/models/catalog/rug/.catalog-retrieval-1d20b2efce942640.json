@@ -1,0 +1,52 @@
+{
+  "archiveSha256": "982fd1f9f044f4821f4c1fa23461f0a4b299171ff3ca2a4689f664abf99cf80a",
+  "archiveSizeBytes": 65398005,
+  "catalogMetadata": [
+    {
+      "archiveSha256": "982fd1f9f044f4821f4c1fa23461f0a4b299171ff3ca2a4689f664abf99cf80a",
+      "catalogPath": "3d-models/cross-category/itch-io-2185222/assets.zip",
+      "license": {
+        "attributionRequired": false,
+        "commercialUseAllowed": true,
+        "copyrightNoticeRequired": false,
+        "editableProjectDistributionAllowed": true,
+        "id": "CC0-1.0",
+        "licenseNoticeRequired": false,
+        "modificationNoticeRequired": false,
+        "reusableTemplateDistributionAllowed": true,
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "metadataPath": "3d-models/cross-category/itch-io-2185222/metadata.json",
+      "metadataSha256": "3923ebb5094f46bcdf0a5fd9a09f03c11ce423ff878afcde2115d6d7bb915219",
+      "snapshotId": "catalog-20260924-japan-characters-scene-removal-v1",
+      "source": {
+        "metadataPath": "3d-models/cross-category/itch-io-2185222/metadata.json",
+        "metadataSha256": "sha256:3923ebb5094f46bcdf0a5fd9a09f03c11ce423ff878afcde2115d6d7bb915219",
+        "name": "Furniture Asset Pack 3D - Free",
+        "packId": "itch-io:2185222",
+        "url": "https://ladoncha.itch.io/furniture-asset-pack"
+      }
+    }
+  ],
+  "catalogSources": [
+    {
+      "catalogPath": "3d-models/cross-category/itch-io-2185222/assets.zip",
+      "snapshotId": "catalog-20260924-japan-characters-scene-removal-v1"
+    }
+  ],
+  "dependencyCoverage": "glb-gltf-obj-mtl-textureatlas-bmfont-tiled",
+  "limitations": [],
+  "members": [
+    {
+      "member": "furniture_pack_update_2.0/models/obj_format/rug.mtl",
+      "sha256": "d2b1eaa20c7fe3a999e2a478f6df97d6ba213d4c3655c26489557c612f7b28a6",
+      "sizeBytes": 237
+    },
+    {
+      "member": "furniture_pack_update_2.0/models/obj_format/rug.obj",
+      "sha256": "85c381e11baa9a18b3bfac55502463386d230abf6fe2e4c066fcb604c98f72c0",
+      "sizeBytes": 82499
+    }
+  ],
+  "version": 1
+}

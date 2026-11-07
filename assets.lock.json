@@ -1,9 +1,17 @@
 {
   "version": 2,
   "groups": {
+    "audio": {
+      "name": "Audio",
+      "order": 40
+    },
     "fonts": {
       "name": "Fonts",
       "order": 20
+    },
+    "models": {
+      "name": "Models",
+      "order": 50
     },
     "share": {
       "name": "Share",
@@ -16,12 +24,180 @@
   },
   "bundles": {},
   "assets": {
+    "assets/audio/collect.wav": {
+      "path": "/manus-storage/game/sha256/570f162b94e18f2036874e4dc9d7eb481c3a4ecae176de50e8d1271a66b58255.wav",
+      "sha256": "sha256:570f162b94e18f2036874e4dc9d7eb481c3a4ecae176de50e8d1271a66b58255",
+      "size": 7100,
+      "assetType": "audio",
+      "groupId": "audio",
+      "used": true
+    },
+    "assets/audio/impact.wav": {
+      "path": "/manus-storage/game/sha256/99f8897d1c5e91ab8aaffbf236fe90f7bd7e14fd75f0257575a02d0f0db9af5b.wav",
+      "sha256": "sha256:99f8897d1c5e91ab8aaffbf236fe90f7bd7e14fd75f0257575a02d0f0db9af5b",
+      "size": 12392,
+      "assetType": "audio",
+      "groupId": "audio",
+      "used": true
+    },
     "assets/fonts/NotoSansArabic-wght.ttf": {
       "path": "/manus-storage/game/sha256/63111b5b2e074dd48cc67692e0a2726d86ee94c1c37fe8598257b7b4e87e869e.ttf",
       "sha256": "sha256:63111b5b2e074dd48cc67692e0a2726d86ee94c1c37fe8598257b7b4e87e869e",
       "size": 844676,
       "assetType": "font",
       "groupId": "fonts",
+      "used": true
+    },
+    "assets/models/catalog/gate/basecolor_gate.png": {
+      "path": "/manus-storage/game/sha256/a50007d37792746d111eb0b8ffa7d28330cb518f2085803c8af91027144c0d2d.png",
+      "sha256": "sha256:a50007d37792746d111eb0b8ffa7d28330cb518f2085803c8af91027144c0d2d",
+      "size": 326694,
+      "assetType": "image",
+      "groupId": "models",
+      "used": false
+    },
+    "assets/models/catalog/gate/gate.glb": {
+      "path": "/manus-storage/game/sha256/c89bf85d687cfa6f016f329dc41c59ee753dcbbf2fdb447a1852b007960c74a2.glb",
+      "sha256": "sha256:c89bf85d687cfa6f016f329dc41c59ee753dcbbf2fdb447a1852b007960c74a2",
+      "size": 6515160,
+      "assetType": "model",
+      "groupId": "models",
+      "used": true
+    },
+    "assets/models/catalog/gate/gate_basecolor_gate.png": {
+      "path": "/manus-storage/game/sha256/a50007d37792746d111eb0b8ffa7d28330cb518f2085803c8af91027144c0d2d.png",
+      "sha256": "sha256:a50007d37792746d111eb0b8ffa7d28330cb518f2085803c8af91027144c0d2d",
+      "size": 326694,
+      "assetType": "image",
+      "groupId": "models",
+      "used": false
+    },
+    "assets/models/catalog/gate/gate_metallic_gate.png": {
+      "path": "/manus-storage/game/sha256/f98efc357e2583a047fec87ac5ffc9f0a400d8d792da93fa33fd4c7c823bb646.png",
+      "sha256": "sha256:f98efc357e2583a047fec87ac5ffc9f0a400d8d792da93fa33fd4c7c823bb646",
+      "size": 11638,
+      "assetType": "image",
+      "groupId": "models",
+      "used": false
+    },
+    "assets/models/catalog/gate/gate_normal_gate.png": {
+      "path": "/manus-storage/game/sha256/f6c9ed5addc9a5ffb3c69997621e310cf73561d60dfd311c01cdd946e59f3290.png",
+      "sha256": "sha256:f6c9ed5addc9a5ffb3c69997621e310cf73561d60dfd311c01cdd946e59f3290",
+      "size": 353335,
+      "assetType": "image",
+      "groupId": "models",
+      "used": false
+    },
+    "assets/models/catalog/gate/metallic_gate.png": {
+      "path": "/manus-storage/game/sha256/aa6466a60bad14df27b26af79395b88cd627f26f11aa2d78ff0e848bfa0425af.png",
+      "sha256": "sha256:aa6466a60bad14df27b26af79395b88cd627f26f11aa2d78ff0e848bfa0425af",
+      "size": 6336,
+      "assetType": "image",
+      "groupId": "models",
+      "used": false
+    },
+    "assets/models/catalog/gate/normal_gate.png": {
+      "path": "/manus-storage/game/sha256/f6c9ed5addc9a5ffb3c69997621e310cf73561d60dfd311c01cdd946e59f3290.png",
+      "sha256": "sha256:f6c9ed5addc9a5ffb3c69997621e310cf73561d60dfd311c01cdd946e59f3290",
+      "size": 353335,
+      "assetType": "image",
+      "groupId": "models",
+      "used": false
+    },
+    "assets/models/catalog/island/fbx/island_small.fbx": {
+      "path": "/manus-storage/game/sha256/f3f9ce6ad934035ab4351b15f560dfbfcc3611f7f7ab414db2edee00a442b4f0.fbx",
+      "sha256": "sha256:f3f9ce6ad934035ab4351b15f560dfbfcc3611f7f7ab414db2edee00a442b4f0",
+      "size": 47676,
+      "assetType": "model",
+      "groupId": "models",
+      "used": true
+    },
+    "assets/models/catalog/rocks/FBX__Rock_1.fbx": {
+      "path": "/manus-storage/game/sha256/8a6e150e2d71dd601daf48d7967e273e940347a4826c2004b71ed1a9fa99c962.fbx",
+      "sha256": "sha256:8a6e150e2d71dd601daf48d7967e273e940347a4826c2004b71ed1a9fa99c962",
+      "size": 15932,
+      "assetType": "model",
+      "groupId": "models",
+      "used": true
+    },
+    "assets/models/catalog/rocks/FBX__Rock_4.fbx": {
+      "path": "/manus-storage/game/sha256/a914a59150ad1c12ff01ffc11de22b826fee9d52dabeb703fb43e7bde1f04e1d.fbx",
+      "sha256": "sha256:a914a59150ad1c12ff01ffc11de22b826fee9d52dabeb703fb43e7bde1f04e1d",
+      "size": 17068,
+      "assetType": "model",
+      "groupId": "models",
+      "used": true
+    },
+    "assets/models/catalog/rocks/FBX__Rock_Moss_2.fbx": {
+      "path": "/manus-storage/game/sha256/9e6bb49e692da8c21c6cf5cdb77bcf6b9956edb55e1719a265524f7007fc717c.fbx",
+      "sha256": "sha256:9e6bb49e692da8c21c6cf5cdb77bcf6b9956edb55e1719a265524f7007fc717c",
+      "size": 17212,
+      "assetType": "model",
+      "groupId": "models",
+      "used": true
+    },
+    "assets/models/catalog/rug/rug.obj": {
+      "path": "/manus-storage/game/sha256/85c381e11baa9a18b3bfac55502463386d230abf6fe2e4c066fcb604c98f72c0.obj",
+      "sha256": "sha256:85c381e11baa9a18b3bfac55502463386d230abf6fe2e4c066fcb604c98f72c0",
+      "size": 82499,
+      "assetType": "model",
+      "groupId": "models",
+      "used": true
+    },
+    "assets/models/quaternius/knight/KnightCharacter.fbx": {
+      "path": "/manus-storage/game/sha256/41f2616fb4a42f9d35e242bbed1450ededc7537def4bf38cbb11b4e54ff2bf21.fbx",
+      "sha256": "sha256:41f2616fb4a42f9d35e242bbed1450ededc7537def4bf38cbb11b4e54ff2bf21",
+      "size": 2092236,
+      "assetType": "model",
+      "groupId": "models",
+      "used": true
+    },
+    "assets/models/quaternius/knight/KnightCharacter.obj": {
+      "path": "/manus-storage/game/sha256/bae440b3d7057e68338632505f242bb762e3b248c7b296913371bf7cda9e1a30.obj",
+      "sha256": "sha256:bae440b3d7057e68338632505f242bb762e3b248c7b296913371bf7cda9e1a30",
+      "size": 73952,
+      "assetType": "model",
+      "groupId": "models",
+      "used": true
+    },
+    "assets/models/quaternius/monsters/Atlas_Monsters.png": {
+      "path": "/manus-storage/game/sha256/b970ed1359ce749fd81a8395d58ff5f3044d843213e17fb94b97892d417c0af9.png",
+      "sha256": "sha256:b970ed1359ce749fd81a8395d58ff5f3044d843213e17fb94b97892d417c0af9",
+      "size": 9007,
+      "assetType": "image",
+      "groupId": "models",
+      "used": false
+    },
+    "assets/models/quaternius/monsters/FlyingDemon.fbx": {
+      "path": "/manus-storage/game/sha256/f2054e37e9b14fb9a476dd9aff8448d027a8195e07cd035ba9025db4d55e202d.fbx",
+      "sha256": "sha256:f2054e37e9b14fb9a476dd9aff8448d027a8195e07cd035ba9025db4d55e202d",
+      "size": 2150124,
+      "assetType": "model",
+      "groupId": "models",
+      "used": true
+    },
+    "assets/models/quaternius/ruins/Arch_Gothic_RoundColumn.fbx": {
+      "path": "/manus-storage/game/sha256/621cb5a9405789bc4092fe27c5065625a3684c24fdabc021254354def3e527db.fbx",
+      "sha256": "sha256:621cb5a9405789bc4092fe27c5065625a3684c24fdabc021254354def3e527db",
+      "size": 78508,
+      "assetType": "model",
+      "groupId": "models",
+      "used": true
+    },
+    "assets/models/quaternius/ruins/Flag_GothicArch.fbx": {
+      "path": "/manus-storage/game/sha256/c4f0276b818c406b2ecbeb67042e49fbbd61039ea75a3345d38cfabeb4a39183.fbx",
+      "sha256": "sha256:c4f0276b818c406b2ecbeb67042e49fbbd61039ea75a3345d38cfabeb4a39183",
+      "size": 18524,
+      "assetType": "model",
+      "groupId": "models",
+      "used": true
+    },
+    "assets/models/quaternius/ruins/Wall_ArchRound.fbx": {
+      "path": "/manus-storage/game/sha256/3e9f6c6a498e9c585ad462e608bb498f0591fc6b80214de7b9281b28c3f857b5.fbx",
+      "sha256": "sha256:3e9f6c6a498e9c585ad462e608bb498f0591fc6b80214de7b9281b28c3f857b5",
+      "size": 53100,
+      "assetType": "model",
+      "groupId": "models",
       "used": true
     },
     "assets/share/favicon.png": {
