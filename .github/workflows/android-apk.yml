@@ -1,0 +1,62 @@
+name: Android APK
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  GODOT_VERSION: 4.7.2
+  APK_PATH: build/magic-carpet-knight.apk
+
+jobs:
+  check:
+    name: Godot checks
+    runs-on: ubuntu-latest
+    container:
+      image: barichello/godot-ci:4.7.2
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Verify project
+        run: godot --headless --path . --script test/magic_carpet_check.gd
+
+  android:
+    name: Android arm64 APK
+    needs: check
+    runs-on: ubuntu-latest
+    container:
+      image: barichello/godot-ci:4.7.2
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install export templates
+        run: |
+          mkdir -p /root/.local/share/godot/export_templates/${GODOT_VERSION}.stable
+          curl -L --fail --retry 3 \
+            -o /tmp/templates.tpz \
+            https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_export_templates.tpz
+          unzip -o /tmp/templates.tpz -d /tmp/godot-templates
+          cp -r /tmp/godot-templates/templates/* /root/.local/share/godot/export_templates/${GODOT_VERSION}.stable/
+      - name: Export signed debug APK
+        run: |
+          mkdir -p build
+          godot --headless --path . --export-debug "Android" "${APK_PATH}"
+          test -s "${APK_PATH}"
+          file "${APK_PATH}"
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: magic-carpet-knight-android-arm64
+          path: ${{ env.APK_PATH }}
+          if-no-files-found: error
+      - name: Create GitHub Release for tags
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ${{ env.APK_PATH }}
+          generate_release_notes: true

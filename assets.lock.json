@@ -1,6 +1,14 @@
 {
   "version": 2,
   "groups": {
+    "fonts": {
+      "name": "Fonts",
+      "order": 20
+    },
+    "share": {
+      "name": "Share",
+      "order": 30
+    },
     "template": {
       "name": "Template",
       "order": 0
@@ -8,6 +16,22 @@
   },
   "bundles": {},
   "assets": {
+    "assets/fonts/NotoSansArabic-wght.ttf": {
+      "path": "/manus-storage/game/sha256/63111b5b2e074dd48cc67692e0a2726d86ee94c1c37fe8598257b7b4e87e869e.ttf",
+      "sha256": "sha256:63111b5b2e074dd48cc67692e0a2726d86ee94c1c37fe8598257b7b4e87e869e",
+      "size": 844676,
+      "assetType": "font",
+      "groupId": "fonts",
+      "used": true
+    },
+    "assets/share/favicon.png": {
+      "path": "/manus-storage/game/sha256/a63a1f93ca0e492b7baeeb101ca541e290bf663670e9a877990dd25d6b12c693.png",
+      "sha256": "sha256:a63a1f93ca0e492b7baeeb101ca541e290bf663670e9a877990dd25d6b12c693",
+      "size": 1995,
+      "assetType": "image",
+      "groupId": "share",
+      "used": true
+    },
     "assets/template/characters/runner.png": {
       "path": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/06/game-template/game-generic/2026.09.07-minimalist-v1/c88485773d6ff9361e036f37d8ac76fb77b8c3f7c041c3f52c8dd222adc8cc21/assets/characters/runner.png",
       "sha256": "sha256:c88485773d6ff9361e036f37d8ac76fb77b8c3f7c041c3f52c8dd222adc8cc21",
@@ -110,7 +134,7 @@
       "size": 473356,
       "assetType": "image",
       "groupId": "template",
-      "used": true
+      "used": false
     },
     "assets/template/ui/pause_glass.png": {
       "path": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/06/game-template/game-generic/2026.09.07-minimalist-v1/c88a4725838df85e72c7270865848f275b62c525c5679a2a8b7ecefb1af82d4b/assets/ui/pause_glass.png",

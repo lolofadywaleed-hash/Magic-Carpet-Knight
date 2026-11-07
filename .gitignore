@@ -25,3 +25,9 @@ node_modules/
 !site/**
 
 # Template fonts (subset WOFF2) restore from assets.lock.json like other media.
+
+*.uid
+*.import
+!assets/fonts/NotoSansArabic-wght.ttf
+!assets/fonts/NotoSansArabic-OFL.txt
+!assets/share/favicon.png

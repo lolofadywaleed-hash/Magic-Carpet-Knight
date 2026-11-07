@@ -1,27 +1,69 @@
 {
   "assets": {
+    "assets/fonts/NotoSansArabic-wght.ttf": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "unknown",
+      "referenceEvidence": [
+        "scripts/magic_carpet_game.gd"
+      ],
+      "regions": [],
+      "sha256": "sha256:63111b5b2e074dd48cc67692e0a2726d86ee94c1c37fe8598257b7b4e87e869e",
+      "shipped": true,
+      "size": 844676,
+      "source": {},
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [
+        "scripts/magic_carpet_game.gd"
+      ],
+      "used": true,
+      "usedBy": []
+    },
+    "assets/share/favicon.png": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "unknown",
+      "referenceEvidence": [
+        "game-sharing.json",
+        "project.godot"
+      ],
+      "regions": [],
+      "sha256": "sha256:a63a1f93ca0e492b7baeeb101ca541e290bf663670e9a877990dd25d6b12c693",
+      "shipped": true,
+      "size": 1995,
+      "source": {},
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [
+        "game-sharing.json",
+        "project.godot"
+      ],
+      "used": true,
+      "usedBy": []
+    },
     "assets/template/characters/runner.png": {
       "declaredUseEvidence": [],
       "generator": {},
       "inputs": [],
       "license": {},
       "origin": "template",
-      "referenceEvidence": [
-        "project.godot"
-      ],
+      "referenceEvidence": [],
       "regions": [],
       "sha256": "sha256:c88485773d6ff9361e036f37d8ac76fb77b8c3f7c041c3f52c8dd222adc8cc21",
-      "shipped": null,
+      "shipped": true,
       "size": 68885,
       "source": {
         "starterId": "game-generic-v56"
       },
-      "status": "awaiting-restoration",
+      "status": "present",
       "transformations": [],
-      "useEvidence": [
-        "project.godot"
-      ],
-      "used": true,
+      "useEvidence": [],
+      "used": false,
       "usedBy": []
     },
     "assets/template/characters/sentinel.png": {
@@ -33,12 +75,12 @@
       "referenceEvidence": [],
       "regions": [],
       "sha256": "sha256:0d9fb751bca5507ba14f7090573e6605a94753390a9e7c53bf2f590f0a24918d",
-      "shipped": null,
+      "shipped": true,
       "size": 64998,
       "source": {
         "starterId": "game-generic-v56"
       },
-      "status": "awaiting-restoration",
+      "status": "present",
       "transformations": [],
       "useEvidence": [],
       "used": false,
@@ -53,12 +95,12 @@
       "referenceEvidence": [],
       "regions": [],
       "sha256": "sha256:ec4ab7867e60fb483dd438459f587b478aac4c1e71ec4fe509ce74a18de34216",
-      "shipped": null,
+      "shipped": true,
       "size": 971282,
       "source": {
         "starterId": "game-generic-v56"
       },
-      "status": "awaiting-restoration",
+      "status": "present",
       "transformations": [],
       "useEvidence": [],
       "used": false,
@@ -73,12 +115,12 @@
       "referenceEvidence": [],
       "regions": [],
       "sha256": "sha256:4b6916024c69961fbfa7cdc929c68f547fea4561e61ebdb3405b3aba0efbd94d",
-      "shipped": null,
+      "shipped": true,
       "size": 58603,
       "source": {
         "starterId": "game-generic-v56"
       },
-      "status": "awaiting-restoration",
+      "status": "present",
       "transformations": [],
       "useEvidence": [],
       "used": false,
@@ -90,26 +132,18 @@
       "inputs": [],
       "license": {},
       "origin": "template",
-      "referenceEvidence": [
-        "assets/template/fonts/ui_bold.tres",
-        "assets/template/fonts/ui_medium.tres",
-        "assets/template/fonts/ui_regular.tres"
-      ],
+      "referenceEvidence": [],
       "regions": [],
       "sha256": "sha256:b3976c5969c8b1afd81dc3e314b61d8ffe3f3f58cf40906443105d330e6e0bdf",
-      "shipped": null,
+      "shipped": true,
       "size": 23660,
       "source": {
         "starterId": "game-generic-v56"
       },
-      "status": "awaiting-restoration",
+      "status": "present",
       "transformations": [],
-      "useEvidence": [
-        "assets/template/fonts/ui_bold.tres",
-        "assets/template/fonts/ui_medium.tres",
-        "assets/template/fonts/ui_regular.tres"
-      ],
-      "used": true,
+      "useEvidence": [],
+      "used": false,
       "usedBy": []
     },
     "assets/template/fonts/NotoSansSC-VF.subset.woff2": {
@@ -121,14 +155,10 @@
         "url": "https://openfontlicense.org/open-font-license-official-text/"
       },
       "origin": "template",
-      "referenceEvidence": [
-        "assets/template/fonts/noto_sans_sc_bold.tres",
-        "assets/template/fonts/noto_sans_sc_medium.tres",
-        "assets/template/fonts/noto_sans_sc_regular.tres"
-      ],
+      "referenceEvidence": [],
       "regions": [],
       "sha256": "sha256:38f4c5f927f746b3dfa4c3a5d7edf0b7a3e828e27438418fa54f9e1565289412",
-      "shipped": null,
+      "shipped": true,
       "size": 1869368,
       "source": {
         "name": "NotoSansSC-VF.subset.woff2",
@@ -136,12 +166,8 @@
       },
       "status": "present",
       "transformations": [],
-      "useEvidence": [
-        "assets/template/fonts/noto_sans_sc_bold.tres",
-        "assets/template/fonts/noto_sans_sc_medium.tres",
-        "assets/template/fonts/noto_sans_sc_regular.tres"
-      ],
-      "used": true,
+      "useEvidence": [],
+      "used": false,
       "usedBy": []
     },
     "assets/template/fonts/display/Sora-VF.subset.woff2": {
@@ -153,12 +179,12 @@
       "referenceEvidence": [],
       "regions": [],
       "sha256": "sha256:438fbf4582548e76b266a738f2c11bcbd5137978f2d2e2f3aaabd49df69186f2",
-      "shipped": null,
+      "shipped": true,
       "size": 41696,
       "source": {
         "starterId": "game-generic-v56"
       },
-      "status": "awaiting-restoration",
+      "status": "present",
       "transformations": [],
       "useEvidence": [],
       "used": false,
@@ -173,12 +199,12 @@
       "referenceEvidence": [],
       "regions": [],
       "sha256": "sha256:ffd7906f240f928e785d7c19a9e7a7b5dfab0d7483be5205dda3e4ba17ebe06a",
-      "shipped": null,
+      "shipped": true,
       "size": 50950,
       "source": {
         "starterId": "game-generic-v56"
       },
-      "status": "awaiting-restoration",
+      "status": "present",
       "transformations": [],
       "useEvidence": [],
       "used": false,
@@ -193,12 +219,12 @@
       "referenceEvidence": [],
       "regions": [],
       "sha256": "sha256:6e7354aa6510a462717218b09b9d784bb161b87878bff62ef4f2a9d03c053de7",
-      "shipped": null,
+      "shipped": true,
       "size": 53724,
       "source": {
         "starterId": "game-generic-v56"
       },
-      "status": "awaiting-restoration",
+      "status": "present",
       "transformations": [],
       "useEvidence": [],
       "used": false,
@@ -213,12 +239,12 @@
       "referenceEvidence": [],
       "regions": [],
       "sha256": "sha256:6a48a85886c0551c1af0df576b0225f0ec3ae86b326fd84fc614083fbfe2908b",
-      "shipped": null,
+      "shipped": true,
       "size": 37238,
       "source": {
         "starterId": "game-generic-v56"
       },
-      "status": "awaiting-restoration",
+      "status": "present",
       "transformations": [],
       "useEvidence": [],
       "used": false,
@@ -233,12 +259,12 @@
       "referenceEvidence": [],
       "regions": [],
       "sha256": "sha256:8cebf0cf730ca35c8c8697192ef78121c926442328a0725e0bd3e31701d64f13",
-      "shipped": null,
+      "shipped": true,
       "size": 39659,
       "source": {
         "starterId": "game-generic-v56"
       },
-      "status": "awaiting-restoration",
+      "status": "present",
       "transformations": [],
       "useEvidence": [],
       "used": false,
@@ -253,12 +279,12 @@
       "referenceEvidence": [],
       "regions": [],
       "sha256": "sha256:96874c000866b2e7503b40da73888afb918ae36e462f51488415157da52a8637",
-      "shipped": null,
+      "shipped": true,
       "size": 49145,
       "source": {
         "starterId": "game-generic-v56"
       },
-      "status": "awaiting-restoration",
+      "status": "present",
       "transformations": [],
       "useEvidence": [],
       "used": false,
@@ -270,22 +296,18 @@
       "inputs": [],
       "license": {},
       "origin": "template",
-      "referenceEvidence": [
-        "project.godot"
-      ],
+      "referenceEvidence": [],
       "regions": [],
       "sha256": "sha256:16dde3061f4e60802f8f0d1a6b875e72b6add05192237b03fef1fd313968a13a",
-      "shipped": null,
+      "shipped": true,
       "size": 473356,
       "source": {
         "starterId": "game-generic-v56"
       },
       "status": "present",
       "transformations": [],
-      "useEvidence": [
-        "project.godot"
-      ],
-      "used": true,
+      "useEvidence": [],
+      "used": false,
       "usedBy": []
     },
     "assets/template/ui/pause_glass.png": {
@@ -297,12 +319,12 @@
       "referenceEvidence": [],
       "regions": [],
       "sha256": "sha256:c88a4725838df85e72c7270865848f275b62c525c5679a2a8b7ecefb1af82d4b",
-      "shipped": null,
+      "shipped": true,
       "size": 115691,
       "source": {
         "starterId": "game-generic-v56"
       },
-      "status": "awaiting-restoration",
+      "status": "present",
       "transformations": [],
       "useEvidence": [],
       "used": false,
@@ -317,12 +339,12 @@
       "referenceEvidence": [],
       "regions": [],
       "sha256": "sha256:8860db07768f093d4effea10b51431f76a1552d4bc7fd4e57757f189c51f0429",
-      "shipped": null,
+      "shipped": true,
       "size": 155592,
       "source": {
         "starterId": "game-generic-v56"
       },
-      "status": "awaiting-restoration",
+      "status": "present",
       "transformations": [],
       "useEvidence": [],
       "used": false,
@@ -331,78 +353,120 @@
   },
   "discoveries": {},
   "downloads": {},
+  "export": {
+    "coverage": "verified",
+    "hostMedia": [
+      {
+        "contentMatches": [],
+        "path": "index.apple-touch-icon.png",
+        "sha256": "sha256:1924cd41169667221e71f79978263aec23c08bf738c8179b741baedad114e25c",
+        "size": 8784,
+        "sourcePaths": []
+      },
+      {
+        "contentMatches": [],
+        "path": "index.icon.png",
+        "sha256": "sha256:27b4787880ad8c7246fe2ad61d222f991a0edb12beb3ef4512204431511e07cc",
+        "size": 3071,
+        "sourcePaths": []
+      },
+      {
+        "contentMatches": [],
+        "path": "index.png",
+        "sha256": "sha256:3cb4495c0b98dfbe4b663cbf2b6836473572339beb66d902367893162a70be0e",
+        "size": 21443,
+        "sourcePaths": []
+      },
+      {
+        "contentMatches": [],
+        "path": "share/a63a1f93ca0e492b7baeeb101ca541e290bf663670e9a877990dd25d6b12c693.png",
+        "sha256": "sha256:a63a1f93ca0e492b7baeeb101ca541e290bf663670e9a877990dd25d6b12c693",
+        "size": 1995,
+        "sourcePaths": [
+          "assets/share/favicon.png"
+        ]
+      }
+    ],
+    "pckSha256": "sha256:49332097510040ddaed3dfbae9e62de4b3b9e84a6cbb40e1cf115bf6802b50d4",
+    "profile": "release",
+    "sourceFingerprint": "sha256:165550d72222d8a418208aedff4a167177d7f5f4cf452cc8256520202b9a07b0"
+  },
   "procedures": {},
   "summary": {
     "ancestry": {
       "ai": {
         "retained": 0,
-        "shipped": null,
+        "shipped": 0,
         "used": 0
       },
       "catalog": {
         "retained": 0,
-        "shipped": null,
+        "shipped": 0,
         "used": 0
       },
       "procedural": {
         "retained": 0,
-        "shipped": null,
+        "shipped": 0,
         "used": 0
       }
     },
     "derivatives": {
       "retained": 0,
-      "shipped": null,
+      "shipped": 0,
       "used": 0
     },
-    "exportedHostMedia": null,
+    "exportedHostMedia": {
+      "paths": 4,
+      "uniqueHashes": 4,
+      "unmatchedSourcePaths": 3
+    },
     "files": {
       "downloaded": 0,
-      "retained": 15,
-      "shipped": null,
-      "used": 4
+      "retained": 17,
+      "shipped": 17,
+      "used": 2
     },
     "origins": {
       "ai": {
         "retained": 0,
-        "shipped": null,
+        "shipped": 0,
         "used": 0
       },
       "catalog": {
         "retained": 0,
-        "shipped": null,
+        "shipped": 0,
         "used": 0
       },
       "derivative": {
         "retained": 0,
-        "shipped": null,
+        "shipped": 0,
         "used": 0
       },
       "external": {
         "retained": 0,
-        "shipped": null,
+        "shipped": 0,
         "used": 0
       },
       "procedural": {
         "retained": 0,
-        "shipped": null,
+        "shipped": 0,
         "used": 0
       },
       "template": {
         "retained": 15,
-        "shipped": null,
-        "used": 4
+        "shipped": 15,
+        "used": 0
       },
       "unknown": {
-        "retained": 0,
-        "shipped": null,
-        "used": 0
+        "retained": 2,
+        "shipped": 2,
+        "used": 2
       }
     },
     "packs": {
       "discovered": 0,
       "downloaded": 0,
-      "shipped": null,
+      "shipped": 0,
       "used": 0
     },
     "proceduralSystems": {
@@ -411,9 +475,109 @@
     },
     "spriteRegions": {
       "retained": 0,
-      "shipped": null,
+      "shipped": 0,
       "used": 0
+    },
+    "visualCoverage": {
+      "approvedRevision": 4,
+      "blueprintId": "gbp_f9150330d4a51ff448139ab9",
+      "committedRoles": 5,
+      "expectedDigest": "3ef4c77fd93c3eb930390f9caac4db06064ac513a01e5d71a489b7db0c9be1cb",
+      "fulfilledRoles": 0,
+      "roles": [
+        {
+          "id": "knight-rider",
+          "reasons": [
+            "unresolved"
+          ],
+          "status": "unresolved"
+        },
+        {
+          "id": "magic-carpet",
+          "reasons": [
+            "unresolved"
+          ],
+          "status": "unresolved"
+        },
+        {
+          "id": "runner-obstacles",
+          "reasons": [
+            "unresolved"
+          ],
+          "status": "unresolved"
+        },
+        {
+          "id": "collectibles",
+          "reasons": [
+            "unresolved"
+          ],
+          "status": "unresolved"
+        },
+        {
+          "id": "fantasy-course",
+          "reasons": [
+            "unresolved"
+          ],
+          "status": "unresolved"
+        }
+      ],
+      "search": {
+        "checkedPages": 0,
+        "outcomes": 0,
+        "overflowEvents": 0,
+        "requests": 0
+      },
+      "selectedButUnusedAssets": [],
+      "staleRenderedEvidence": [],
+      "status": "incomplete",
+      "unexplainedFallbacks": [],
+      "unresolvedRoles": [
+        "knight-rider",
+        "magic-carpet",
+        "runner-obstacles",
+        "collectibles",
+        "fantasy-course"
+      ],
+      "visualQuality": "requires_agent_review"
     }
   },
-  "version": 1
+  "version": 1,
+  "visualCoverage": {
+    "attempts": {},
+    "expected": {
+      "approvedRevision": 4,
+      "blueprintId": "gbp_f9150330d4a51ff448139ab9",
+      "digest": "3ef4c77fd93c3eb930390f9caac4db06064ac513a01e5d71a489b7db0c9be1cb",
+      "roles": [
+        {
+          "description": "شخصية فارس خيالي ثلاثية الأبعاد تحمل سيفًا وتبقى واضحة من كاميرا خلفية أثناء الطيران والحركة الجانبية والعمودية.",
+          "id": "knight-rider",
+          "label": "فارس مدرّع راكب"
+        },
+        {
+          "description": "بساط ثلاثي الأبعاد ملوّن ومقروء بصريًا، يتحرك مترابطًا مع فارسك ويُظهر إحساس الطيران دون الاعتماد على شكل بدائي غير مصقول.",
+          "id": "magic-carpet",
+          "label": "بساط سحري طائر"
+        },
+        {
+          "description": "مجموعة أساسية من الصخور والبوابات والعقبات ثلاثية الأبعاد، ذات ظلال واضحة وأشكال يسهل تمييزها وتفاديها عند ازدياد السرعة.",
+          "id": "runner-obstacles",
+          "label": "عوائق المسار الخيالية"
+        },
+        {
+          "description": "مقتنيات ثلاثية الأبعاد لامعة وواضحة أثناء الحركة السريعة، مناسبة لإظهار تأثير بسيط عند جمعها واحتساب النقاط.",
+          "id": "collectibles",
+          "label": "الجواهر والبلورات القابلة للجمع"
+        },
+        {
+          "description": "تكوين ثلاثي الأبعاد ملوّن يوفّر مسارًا جويًا وخلفية عالم متماسكة للفارس والبساط، مع خامات وإضاءة وظلال محسّنة من دون توسيع المشاهد للزينة فقط.",
+          "id": "fantasy-course",
+          "label": "مسار وعالم الطيران الخيالي"
+        }
+      ]
+    },
+    "overflowEvents": 0,
+    "resolutions": {},
+    "version": 1
+  }
 }

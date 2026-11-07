@@ -3,8 +3,8 @@
   "checks": [
     {
       "kind": "script",
-      "path": "res://test/world_3d_check.gd",
-      "expect": "[3d-scaffold] PASS"
+      "path": "res://test/magic_carpet_check.gd",
+      "expect": "[magic-carpet] PASS"
     }
   ]
 }

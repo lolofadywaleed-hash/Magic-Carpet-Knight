@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 2,
+  "title": "Magic Carpet Knight – فارس البساط السحري",
+  "description": "حلّق بفارس مدرّع فوق بساط سحري، غيّر المسار والارتفاع، تفادَ الصخور والبوابات واجمع البلورات لتحطم أفضل نتيجة.",
+  "defaultCaptions": {
+    "x": "Magic Carpet Knight – رحلة جوية لا نهائية بين العقبات والبلورات.",
+    "facebook": "حلّق فوق السحاب، اجمع البلورات، واصنع أفضل نتيجة في Magic Carpet Knight.",
+    "reddit": "لعبة جري لا نهائي ثلاثية الأبعاد بإيقاع سريع وتحكم بالسحب.",
+    "discord": "Magic Carpet Knight: فارس، بساط سحري، عقبات، وبلورات متوهجة."
+  },
+  "assets": {
+    "favicon": "assets/share/favicon.png"
+  }
+}
