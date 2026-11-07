@@ -25,7 +25,7 @@ jobs:
       - name: Install runtime libraries
         run: |
           apt-get update
-          apt-get install -y --no-install-recommends libfontconfig1
+          apt-get install -y --no-install-recommends libfontconfig1 curl unzip ca-certificates
       - name: Verify project
         run: godot --headless --path . --script test/magic_carpet_check.gd
 
@@ -41,7 +41,7 @@ jobs:
       - name: Install runtime libraries
         run: |
           apt-get update
-          apt-get install -y --no-install-recommends libfontconfig1
+          apt-get install -y --no-install-recommends libfontconfig1 curl unzip ca-certificates
       - name: Install export templates
         run: |
           mkdir -p /root/.local/share/godot/export_templates/${GODOT_VERSION}.stable
