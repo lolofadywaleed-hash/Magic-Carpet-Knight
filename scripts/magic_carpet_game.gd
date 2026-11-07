@@ -12,8 +12,8 @@ const TRACK_GAP := 14.0
 const TRACK_COUNT := 15
 const HAZARD_COUNT := 20
 const GEM_COUNT := 30
-const UI_FONT := preload("res://assets/fonts/NotoSansArabic-wght.ttf")
-const UI_BOLD := preload("res://assets/fonts/NotoSansArabic-wght.ttf")
+var ui_font: Font
+var ui_bold: Font
 
 var state: GameState = GameState.TITLE
 var world_root: Node3D
@@ -57,6 +57,10 @@ var title_button: Button
 var dimmer: ColorRect
 
 func _ready() -> void:
+	ui_font = load("res://assets/fonts/NotoSansArabic-wght.ttf") as Font
+	if ui_font == null:
+		ui_font = load("res://assets/template/fonts/ui_regular.tres") as Font
+	ui_bold = ui_font
 	rng.seed = 20261107
 	best_score = _load_best_score()
 	_build_world()
@@ -497,13 +501,13 @@ func _build_ui() -> void:
 	title_content.add_theme_constant_override("separation", 14)
 	title_content.alignment = BoxContainer.ALIGNMENT_CENTER
 	title_card.add_child(title_content)
-	var eyebrow := _label("رحلة فوق السحاب", 18, Color("78e5ff"), UI_BOLD)
+	var eyebrow := _label("رحلة فوق السحاب", 18, Color("78e5ff"), ui_bold)
 	eyebrow.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	title_content.add_child(eyebrow)
-	var title := _label("فارس البساط السحري", 38, Color("fff0a8"), UI_BOLD)
+	var title := _label("فارس البساط السحري", 38, Color("fff0a8"), ui_bold)
 	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	title_content.add_child(title)
-	var subtitle := _label("Magic Carpet Knight", 19, Color("d7e6ff"), UI_FONT)
+	var subtitle := _label("Magic Carpet Knight", 19, Color("d7e6ff"), ui_font)
 	subtitle.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	title_content.add_child(subtitle)
 	var rule := ColorRect.new()
@@ -511,18 +515,18 @@ func _build_ui() -> void:
 	rule.custom_minimum_size = Vector2(170.0, 3.0)
 	rule.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
 	title_content.add_child(rule)
-	var hint := _label("بدّل المسار والارتفاع، تفادَ الصخور والبوابات، واجمع البلورات.", 18, Color("b9c9ef"), UI_FONT)
+	var hint := _label("بدّل المسار والارتفاع، تفادَ الصخور والبوابات، واجمع البلورات.", 18, Color("b9c9ef"), ui_font)
 	hint.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	hint.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	title_content.add_child(hint)
-	var controls := _label("لوحة المفاتيح: الأسهم أو WASD  •  الهاتف: اسحب", 15, Color("8aa6d6"), UI_FONT)
+	var controls := _label("لوحة المفاتيح: الأسهم أو WASD  •  الهاتف: اسحب", 15, Color("8aa6d6"), ui_font)
 	controls.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	title_content.add_child(controls)
 	start_button = Button.new()
 	start_button.text = "ابدأ الرحلة"
 	start_button.custom_minimum_size = Vector2(250.0, 58.0)
 	start_button.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
-	start_button.add_theme_font_override("font", UI_BOLD)
+	start_button.add_theme_font_override("font", ui_bold)
 	start_button.add_theme_font_size_override("font_size", 22)
 	start_button.add_theme_color_override("font_color", Color("06112f"))
 	start_button.add_theme_stylebox_override("normal", _style(Color("ffd86a"), Color("fff3ae")))
@@ -530,7 +534,7 @@ func _build_ui() -> void:
 	start_button.add_theme_stylebox_override("pressed", _style(Color("e7aa45"), Color("fff3ae")))
 	start_button.pressed.connect(start_run)
 	title_content.add_child(start_button)
-	title_status = _label("أفضل نتيجة: %d" % best_score, 16, Color("91a8d4"), UI_FONT)
+	title_status = _label("أفضل نتيجة: %d" % best_score, 16, Color("91a8d4"), ui_font)
 	title_status.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	title_content.add_child(title_status)
 	_build_hud()
@@ -554,22 +558,22 @@ func _build_hud() -> void:
 	var row := HBoxContainer.new()
 	row.add_theme_constant_override("separation", 22)
 	bar.add_child(row)
-	score_label = _label("النقاط  000000", 23, Color("fff0a8"), UI_BOLD)
+	score_label = _label("النقاط  000000", 23, Color("fff0a8"), ui_bold)
 	score_label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	row.add_child(score_label)
-	speed_label = _label("السرعة  11", 18, Color("9feaff"), UI_FONT)
+	speed_label = _label("السرعة  11", 18, Color("9feaff"), ui_font)
 	row.add_child(speed_label)
-	altitude_label = _label("الارتفاع  2 / 3", 18, Color("e8b6ff"), UI_FONT)
+	altitude_label = _label("الارتفاع  2 / 3", 18, Color("e8b6ff"), ui_font)
 	row.add_child(altitude_label)
-	best_label = _label("الأفضل  000000", 18, Color("c8d8ff"), UI_FONT)
+	best_label = _label("الأفضل  000000", 18, Color("c8d8ff"), ui_font)
 	row.add_child(best_label)
 	pause_button = Button.new()
 	pause_button.text = "إيقاف مؤقت"
 	pause_button.custom_minimum_size = Vector2(150.0, 45.0)
-	pause_button.add_theme_font_override("font", UI_BOLD)
+	pause_button.add_theme_font_override("font", ui_bold)
 	pause_button.pressed.connect(_toggle_pause)
 	row.add_child(pause_button)
-	toast_label = _label("", 21, Color("fff0a8"), UI_BOLD)
+	toast_label = _label("", 21, Color("fff0a8"), ui_bold)
 	toast_label.set_anchors_preset(Control.PRESET_CENTER_TOP)
 	toast_label.position = Vector2(-240.0, 112.0)
 	toast_label.size = Vector2(480.0, 44.0)
@@ -596,10 +600,10 @@ func _build_pause_layer() -> void:
 	content.name = "Content"
 	content.add_theme_constant_override("separation", 16)
 	panel.add_child(content)
-	var title := _label("الرحلة متوقفة", 30, Color("fff0a8"), UI_BOLD)
+	var title := _label("الرحلة متوقفة", 30, Color("fff0a8"), ui_bold)
 	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	content.add_child(title)
-	var hint := _label("اضغط استئناف عندما تكون جاهزًا", 17, Color("cbd8ff"), UI_FONT)
+	var hint := _label("اضغط استئناف عندما تكون جاهزًا", 17, Color("cbd8ff"), ui_font)
 	hint.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	content.add_child(hint)
 	resume_button = _action_button("استئناف")
@@ -630,14 +634,14 @@ func _build_result_layer() -> void:
 	content.name = "Content"
 	content.add_theme_constant_override("separation", 13)
 	panel.add_child(content)
-	var title := _label("انتهت الرحلة", 31, Color("ffb2da"), UI_BOLD)
+	var title := _label("انتهت الرحلة", 31, Color("ffb2da"), ui_bold)
 	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	content.add_child(title)
-	var score_result := _label("النتيجة: 0", 24, Color("fff0a8"), UI_BOLD)
+	var score_result := _label("النتيجة: 0", 24, Color("fff0a8"), ui_bold)
 	score_result.name = "Score"
 	score_result.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	content.add_child(score_result)
-	var best_result := _label("أفضل نتيجة: 0", 18, Color("cbd8ff"), UI_FONT)
+	var best_result := _label("أفضل نتيجة: 0", 18, Color("cbd8ff"), ui_font)
 	best_result.name = "Best"
 	best_result.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	content.add_child(best_result)
@@ -684,7 +688,7 @@ func _action_button(text: String) -> Button:
 	button.text = text
 	button.custom_minimum_size = Vector2(270.0, 48.0)
 	button.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
-	button.add_theme_font_override("font", UI_BOLD)
+	button.add_theme_font_override("font", ui_bold)
 	button.add_theme_font_size_override("font_size", 18)
 	button.add_theme_color_override("font_color", Color("06112f"))
 	button.add_theme_stylebox_override("normal", _style(Color("83e9ff"), Color("d4f8ff")))

@@ -132,7 +132,9 @@
       "inputs": [],
       "license": {},
       "origin": "template",
-      "referenceEvidence": [],
+      "referenceEvidence": [
+        "assets/template/fonts/ui_regular.tres"
+      ],
       "regions": [],
       "sha256": "sha256:b3976c5969c8b1afd81dc3e314b61d8ffe3f3f58cf40906443105d330e6e0bdf",
       "shipped": true,
@@ -142,8 +144,10 @@
       },
       "status": "present",
       "transformations": [],
-      "useEvidence": [],
-      "used": false,
+      "useEvidence": [
+        "assets/template/fonts/ui_regular.tres"
+      ],
+      "used": true,
       "usedBy": []
     },
     "assets/template/fonts/NotoSansSC-VF.subset.woff2": {
@@ -155,7 +159,9 @@
         "url": "https://openfontlicense.org/open-font-license-official-text/"
       },
       "origin": "template",
-      "referenceEvidence": [],
+      "referenceEvidence": [
+        "assets/template/fonts/noto_sans_sc_regular.tres"
+      ],
       "regions": [],
       "sha256": "sha256:38f4c5f927f746b3dfa4c3a5d7edf0b7a3e828e27438418fa54f9e1565289412",
       "shipped": true,
@@ -166,8 +172,10 @@
       },
       "status": "present",
       "transformations": [],
-      "useEvidence": [],
-      "used": false,
+      "useEvidence": [
+        "assets/template/fonts/noto_sans_sc_regular.tres"
+      ],
+      "used": true,
       "usedBy": []
     },
     "assets/template/fonts/display/Sora-VF.subset.woff2": {
@@ -387,9 +395,9 @@
         ]
       }
     ],
-    "pckSha256": "sha256:49332097510040ddaed3dfbae9e62de4b3b9e84a6cbb40e1cf115bf6802b50d4",
+    "pckSha256": "sha256:5c8ff9de1ebad9e7ce989045d02dd0141b997f07f4497e5890e7667d1e4ac5dd",
     "profile": "release",
-    "sourceFingerprint": "sha256:165550d72222d8a418208aedff4a167177d7f5f4cf452cc8256520202b9a07b0"
+    "sourceFingerprint": "sha256:e5096949f5dd8dcc6f67dbdb368959ddbeb4309f0346d92e26bbed2355c63bab"
   },
   "procedures": {},
   "summary": {
@@ -424,7 +432,7 @@
       "downloaded": 0,
       "retained": 17,
       "shipped": 17,
-      "used": 2
+      "used": 4
     },
     "origins": {
       "ai": {
@@ -455,7 +463,7 @@
       "template": {
         "retained": 15,
         "shipped": 15,
-        "used": 0
+        "used": 2
       },
       "unknown": {
         "retained": 2,

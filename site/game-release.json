@@ -3,13 +3,13 @@
   "engineVersion": "4.7.2.stable.official.ed1daf0bf",
   "inputs": {
     "objectFormat": "sha1",
-    "tree": "e18c6b5698d23c42519a54e1da775cc1883ca95f",
+    "tree": "745e6137d239dd156643d361dda8a0398e35a032",
     "entries": [
       {
         "path": ".github/workflows/android-apk.yml",
         "type": "file",
         "mode": "100644",
-        "object": "3d01f36b60a34228821d3cd9659725680285e6ff"
+        "object": "bd237959067ea77c0563ff03dac37609042a9c44"
       },
       {
         "path": ".gitignore",
@@ -544,7 +544,7 @@
         "path": "scripts/magic_carpet_game.gd",
         "type": "file",
         "mode": "100644",
-        "object": "dc23133617b62f3b41cbe60b45e73a96c8371dc3"
+        "object": "51171cb00a1a5b41bc627511ecf124b3f019125f"
       },
       {
         "path": "scripts/magic_carpet_game.gd.uid",
@@ -939,7 +939,7 @@
     ]
   },
   "build": {
-    "snapshotId": "sha256:54b75d902a7d4e79b03f8f07c73ca1b13af04d50f68380870b0883c7535e61ae",
+    "snapshotId": "sha256:42c0d8ac3541a57de637c8834d5ca3541e64ea00d7b36319e4de953fbfc3756e",
     "toolchain": {
       "engineVersion": "4.7.2.stable.official.ed1daf0bf",
       "engineDigest": "sha256:8d106cbe6144c2dc7e881d61d2429c1a8a76e6b22ef48bd5e48dcf934953f71e",
@@ -952,21 +952,21 @@
     "profile": "release",
     "export": {
       "profile": "release",
-      "snapshotId": "sha256:54b75d902a7d4e79b03f8f07c73ca1b13af04d50f68380870b0883c7535e61ae",
+      "snapshotId": "sha256:42c0d8ac3541a57de637c8834d5ca3541e64ea00d7b36319e4de953fbfc3756e",
       "files": {
         "THIRD_PARTY_NOTICES.txt": "sha256:ed92c36308bfe5f886bea86cbc42fd034b9340a28db433993742908fddda2f5a",
         "index.apple-touch-icon.png": "sha256:1924cd41169667221e71f79978263aec23c08bf738c8179b741baedad114e25c",
         "index.audio.position.worklet.js": "sha256:be33985bc7160d6bf9646f259cd86b259cd67b02ccb297ee5c44f8ac84327bc8",
         "index.audio.worklet.js": "sha256:5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3",
-        "index.html": "sha256:d8cb890bd1c5b5faef3269be0a99d52d6a2f57353b96ad68b66c1a7873903ed5",
+        "index.html": "sha256:c043e32cbfa187496c509c34a0943d17db3e2b45f189998ae27bd73b280ce4e1",
         "index.icon.png": "sha256:27b4787880ad8c7246fe2ad61d222f991a0edb12beb3ef4512204431511e07cc",
         "index.js": "sha256:cb28c2d8ffd8981888823f1b6d98cdec4e3e11adf209ad556c22878e6d51c63a",
-        "index.pck": "sha256:49332097510040ddaed3dfbae9e62de4b3b9e84a6cbb40e1cf115bf6802b50d4",
+        "index.pck": "sha256:5c8ff9de1ebad9e7ce989045d02dd0141b997f07f4497e5890e7667d1e4ac5dd",
         "index.png": "sha256:3cb4495c0b98dfbe4b663cbf2b6836473572339beb66d902367893162a70be0e",
         "index.wasm": "sha256:fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0",
         "open-source-licenses.html": "sha256:39c69bce7ef5caedd92425e041946b3b276278f80673330ad02973eee01e9114"
       },
-      "digest": "sha256:b7733a31c05b0f97762c459c404152ff2231da78d4954bd2b83c9093d10b1595"
+      "digest": "sha256:b957a3f85218437ba09c135b7ecc9771cd6cc0cf3150c65d0ae6da4bba1a1ad9"
     }
   },
   "artifacts": {
@@ -975,8 +975,8 @@
       "sha256": "sha256:fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
     },
     "pck": {
-      "path": "/manus-storage/game/sha256/49332097510040ddaed3dfbae9e62de4b3b9e84a6cbb40e1cf115bf6802b50d4.pck",
-      "sha256": "sha256:49332097510040ddaed3dfbae9e62de4b3b9e84a6cbb40e1cf115bf6802b50d4"
+      "path": "/manus-storage/game/sha256/5c8ff9de1ebad9e7ce989045d02dd0141b997f07f4497e5890e7667d1e4ac5dd.pck",
+      "sha256": "sha256:5c8ff9de1ebad9e7ce989045d02dd0141b997f07f4497e5890e7667d1e4ac5dd"
     }
   },
   "files": {
@@ -985,7 +985,7 @@
     "index.apple-touch-icon.png": "sha256:1924cd41169667221e71f79978263aec23c08bf738c8179b741baedad114e25c",
     "index.audio.position.worklet.js": "sha256:be33985bc7160d6bf9646f259cd86b259cd67b02ccb297ee5c44f8ac84327bc8",
     "index.audio.worklet.js": "sha256:5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3",
-    "index.html": "sha256:453b3f7ae785f0d6b14163345b9c4cf68812ec7d1f29945071fbfd798229db6d",
+    "index.html": "sha256:ce20e30ad5616ff090f0d1348ef652272c9cfb4a76ab666dd41af9c9c8218dc1",
     "index.icon.png": "sha256:27b4787880ad8c7246fe2ad61d222f991a0edb12beb3ef4512204431511e07cc",
     "index.js": "sha256:cb28c2d8ffd8981888823f1b6d98cdec4e3e11adf209ad556c22878e6d51c63a",
     "index.png": "sha256:3cb4495c0b98dfbe4b663cbf2b6836473572339beb66d902367893162a70be0e",

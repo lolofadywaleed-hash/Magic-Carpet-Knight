@@ -22,6 +22,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Install runtime libraries
+        run: |
+          apt-get update
+          apt-get install -y --no-install-recommends libfontconfig1
       - name: Verify project
         run: godot --headless --path . --script test/magic_carpet_check.gd
 
@@ -34,6 +38,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Install runtime libraries
+        run: |
+          apt-get update
+          apt-get install -y --no-install-recommends libfontconfig1
       - name: Install export templates
         run: |
           mkdir -p /root/.local/share/godot/export_templates/${GODOT_VERSION}.stable
