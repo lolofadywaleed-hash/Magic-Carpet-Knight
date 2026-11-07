@@ -3,7 +3,7 @@
   "engineVersion": "4.7.2.stable.official.ed1daf0bf",
   "inputs": {
     "objectFormat": "sha1",
-    "tree": "745e6137d239dd156643d361dda8a0398e35a032",
+    "tree": "39450a3722ea30e5bbc81e080f1ae6cdecaf5b6e",
     "entries": [
       {
         "path": ".github/workflows/android-apk.yml",
@@ -802,7 +802,7 @@
         "path": "test/magic_carpet_check.gd",
         "type": "file",
         "mode": "100644",
-        "object": "2c2fbabac18d8f622f9e61824d3bc5b6ae5f17c9"
+        "object": "f313718cadeff796321094e4e18450007a265bb3"
       },
       {
         "path": "test/magic_carpet_check.gd.uid",
@@ -939,7 +939,7 @@
     ]
   },
   "build": {
-    "snapshotId": "sha256:42c0d8ac3541a57de637c8834d5ca3541e64ea00d7b36319e4de953fbfc3756e",
+    "snapshotId": "sha256:4bef7d698406b3a792bd9c72eafeafb3e28eedf9ec8d8426e5b0cc8684fd3d5f",
     "toolchain": {
       "engineVersion": "4.7.2.stable.official.ed1daf0bf",
       "engineDigest": "sha256:8d106cbe6144c2dc7e881d61d2429c1a8a76e6b22ef48bd5e48dcf934953f71e",
@@ -952,7 +952,7 @@
     "profile": "release",
     "export": {
       "profile": "release",
-      "snapshotId": "sha256:42c0d8ac3541a57de637c8834d5ca3541e64ea00d7b36319e4de953fbfc3756e",
+      "snapshotId": "sha256:4bef7d698406b3a792bd9c72eafeafb3e28eedf9ec8d8426e5b0cc8684fd3d5f",
       "files": {
         "THIRD_PARTY_NOTICES.txt": "sha256:ed92c36308bfe5f886bea86cbc42fd034b9340a28db433993742908fddda2f5a",
         "index.apple-touch-icon.png": "sha256:1924cd41169667221e71f79978263aec23c08bf738c8179b741baedad114e25c",
@@ -961,12 +961,12 @@
         "index.html": "sha256:c043e32cbfa187496c509c34a0943d17db3e2b45f189998ae27bd73b280ce4e1",
         "index.icon.png": "sha256:27b4787880ad8c7246fe2ad61d222f991a0edb12beb3ef4512204431511e07cc",
         "index.js": "sha256:cb28c2d8ffd8981888823f1b6d98cdec4e3e11adf209ad556c22878e6d51c63a",
-        "index.pck": "sha256:5c8ff9de1ebad9e7ce989045d02dd0141b997f07f4497e5890e7667d1e4ac5dd",
+        "index.pck": "sha256:f8862498ab73816a2166075f39826d12fed08cf8eb16d91cc09707fcf33eaaf0",
         "index.png": "sha256:3cb4495c0b98dfbe4b663cbf2b6836473572339beb66d902367893162a70be0e",
         "index.wasm": "sha256:fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0",
         "open-source-licenses.html": "sha256:39c69bce7ef5caedd92425e041946b3b276278f80673330ad02973eee01e9114"
       },
-      "digest": "sha256:b957a3f85218437ba09c135b7ecc9771cd6cc0cf3150c65d0ae6da4bba1a1ad9"
+      "digest": "sha256:2c8e2f25a26c632a29a04d913e3b32eb2481d8a627ca2aaa8fec12b7f6281eef"
     }
   },
   "artifacts": {
@@ -975,8 +975,8 @@
       "sha256": "sha256:fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
     },
     "pck": {
-      "path": "/manus-storage/game/sha256/5c8ff9de1ebad9e7ce989045d02dd0141b997f07f4497e5890e7667d1e4ac5dd.pck",
-      "sha256": "sha256:5c8ff9de1ebad9e7ce989045d02dd0141b997f07f4497e5890e7667d1e4ac5dd"
+      "path": "/manus-storage/game/sha256/f8862498ab73816a2166075f39826d12fed08cf8eb16d91cc09707fcf33eaaf0.pck",
+      "sha256": "sha256:f8862498ab73816a2166075f39826d12fed08cf8eb16d91cc09707fcf33eaaf0"
     }
   },
   "files": {
@@ -985,7 +985,7 @@
     "index.apple-touch-icon.png": "sha256:1924cd41169667221e71f79978263aec23c08bf738c8179b741baedad114e25c",
     "index.audio.position.worklet.js": "sha256:be33985bc7160d6bf9646f259cd86b259cd67b02ccb297ee5c44f8ac84327bc8",
     "index.audio.worklet.js": "sha256:5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3",
-    "index.html": "sha256:ce20e30ad5616ff090f0d1348ef652272c9cfb4a76ab666dd41af9c9c8218dc1",
+    "index.html": "sha256:fe48d6ca7cd7e136caa2f54efdf08dff8d4859b05c22eaea256dd9a83e0cbb46",
     "index.icon.png": "sha256:27b4787880ad8c7246fe2ad61d222f991a0edb12beb3ef4512204431511e07cc",
     "index.js": "sha256:cb28c2d8ffd8981888823f1b6d98cdec4e3e11adf209ad556c22878e6d51c63a",
     "index.png": "sha256:3cb4495c0b98dfbe4b663cbf2b6836473572339beb66d902367893162a70be0e",
