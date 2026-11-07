@@ -3,13 +3,13 @@
   "engineVersion": "4.7.2.stable.official.ed1daf0bf",
   "inputs": {
     "objectFormat": "sha1",
-    "tree": "f459f86cf4d193903ba640a38601a8f71ed6f769",
+    "tree": "ac3a473b83a3c0a132c978fadf9a51d9e5df7c13",
     "entries": [
       {
         "path": ".github/workflows/android-apk.yml",
         "type": "file",
         "mode": "100644",
-        "object": "f30639cd58c4412dcd22eb517e4c501c5afbba0d"
+        "object": "be8f51a3c66fc431061a2e760e64ff84f2ba79f6"
       },
       {
         "path": ".gitignore",
@@ -436,7 +436,7 @@
         "path": "export_presets.cfg",
         "type": "file",
         "mode": "100644",
-        "object": "479e38c19707d5c27eab4e8589577456ca0a3e5a"
+        "object": "355c4715bf79207e97857c8e8f7a59da813b6c2a"
       },
       {
         "path": "game-verification.json",
@@ -939,7 +939,7 @@
     ]
   },
   "build": {
-    "snapshotId": "sha256:e434094f52a11e5f3506beb1c7b0c4834f09cf1eb5c18a6254b4716272841e5b",
+    "snapshotId": "sha256:9b6524e58d7468a8f4b908dabe49829e3c74967443f3ed968b0c6876eeacbcca",
     "toolchain": {
       "engineVersion": "4.7.2.stable.official.ed1daf0bf",
       "engineDigest": "sha256:8d106cbe6144c2dc7e881d61d2429c1a8a76e6b22ef48bd5e48dcf934953f71e",
@@ -952,7 +952,7 @@
     "profile": "release",
     "export": {
       "profile": "release",
-      "snapshotId": "sha256:e434094f52a11e5f3506beb1c7b0c4834f09cf1eb5c18a6254b4716272841e5b",
+      "snapshotId": "sha256:9b6524e58d7468a8f4b908dabe49829e3c74967443f3ed968b0c6876eeacbcca",
       "files": {
         "THIRD_PARTY_NOTICES.txt": "sha256:ed92c36308bfe5f886bea86cbc42fd034b9340a28db433993742908fddda2f5a",
         "index.apple-touch-icon.png": "sha256:1924cd41169667221e71f79978263aec23c08bf738c8179b741baedad114e25c",
@@ -961,12 +961,12 @@
         "index.html": "sha256:0ba607c8e71cda46c0a0eaab5aebc8e8775c174227092dbd2cb0f551d4bb9508",
         "index.icon.png": "sha256:27b4787880ad8c7246fe2ad61d222f991a0edb12beb3ef4512204431511e07cc",
         "index.js": "sha256:cb28c2d8ffd8981888823f1b6d98cdec4e3e11adf209ad556c22878e6d51c63a",
-        "index.pck": "sha256:db9fbfc0d6ba9a1f202e56e006218aa0b4b72ab16cfd746f2e2a67bec9dc9a81",
+        "index.pck": "sha256:68b2ad9232b273ef9a29bf292356caae77bfa0191bbb771fcf4245a4b5d40681",
         "index.png": "sha256:3cb4495c0b98dfbe4b663cbf2b6836473572339beb66d902367893162a70be0e",
         "index.wasm": "sha256:fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0",
         "open-source-licenses.html": "sha256:39c69bce7ef5caedd92425e041946b3b276278f80673330ad02973eee01e9114"
       },
-      "digest": "sha256:01fd3e52b7d548a5f4807e491d06689fb47d2a7180db0b9fc38c317afd0e35f8"
+      "digest": "sha256:995ee7209f671f2e325fbea1bd9b4d6122f039416ba31acfc2943b1ebb6d4680"
     }
   },
   "artifacts": {
@@ -975,8 +975,8 @@
       "sha256": "sha256:fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
     },
     "pck": {
-      "path": "/manus-storage/game/sha256/db9fbfc0d6ba9a1f202e56e006218aa0b4b72ab16cfd746f2e2a67bec9dc9a81.pck",
-      "sha256": "sha256:db9fbfc0d6ba9a1f202e56e006218aa0b4b72ab16cfd746f2e2a67bec9dc9a81"
+      "path": "/manus-storage/game/sha256/68b2ad9232b273ef9a29bf292356caae77bfa0191bbb771fcf4245a4b5d40681.pck",
+      "sha256": "sha256:68b2ad9232b273ef9a29bf292356caae77bfa0191bbb771fcf4245a4b5d40681"
     }
   },
   "files": {
@@ -985,7 +985,7 @@
     "index.apple-touch-icon.png": "sha256:1924cd41169667221e71f79978263aec23c08bf738c8179b741baedad114e25c",
     "index.audio.position.worklet.js": "sha256:be33985bc7160d6bf9646f259cd86b259cd67b02ccb297ee5c44f8ac84327bc8",
     "index.audio.worklet.js": "sha256:5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3",
-    "index.html": "sha256:c708dce334c81a06c5eb5f4628ea64384a757fc40cb4243a70b370d7243b560e",
+    "index.html": "sha256:ff38b7e35cc4cad72b7d372193efe3e01079438c89b2ce043b561d2567b81065",
     "index.icon.png": "sha256:27b4787880ad8c7246fe2ad61d222f991a0edb12beb3ef4512204431511e07cc",
     "index.js": "sha256:cb28c2d8ffd8981888823f1b6d98cdec4e3e11adf209ad556c22878e6d51c63a",
     "index.png": "sha256:3cb4495c0b98dfbe4b663cbf2b6836473572339beb66d902367893162a70be0e",
